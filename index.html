@@ -1,1411 +1,827 @@
 <!DOCTYPE html>
-<html lang="">
-
+<html lang="en">
 <head>
-	<title></title>
-	<meta content="summary_large_image" name="twitter:card" />
-	<meta content="website" property="og:type" />
-	<meta content="" property="og:description" />
-	<meta content="" property="og:url" />
-	<meta content="images/1_13908690_large.jpg" property="og:image" />
-	<meta content="" property="og:title" />
-	<meta content="" name="description" />
-	<meta charset="utf-8" />
-	<meta content="width=device-width" name="viewport" />
-	<link href="images/2_Black_Logo-dafd52-16-icon.png" rel="icon" sizes="16x16" />
-	<link href="images/3_Black_Logo-dafd52-32-icon.png" rel="icon" sizes="32x32" />
-	<link href="images/4_Black_Logo-dafd52-apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css" />
-	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet" type="text/css" />
-	<style>
-		.bee-row,
-		.bee-row-content {
-			position: relative
-		}
-
-		.bee-button-content {
-			text-align: center
-		}
-
-		.bee-row-3 .bee-row-content,
-		.bee-row-8 .bee-row-content {
-			border-bottom: 0 dashed #006cb7;
-			border-left: 0 dashed #006cb7;
-			border-right: 0px dashed #006cb7;
-			border-top: 0 dashed #006cb7
-		}
-
-		.bee-row-1 .bee-col-3 .bee-block-1 a:hover,
-		.bee-row-3 .bee-col-1 .bee-block-5 a:hover,
-		.bee-row-3 .bee-col-2 .bee-block-5 a:hover {
-			border-bottom: 2px solid #000000 !important;
-			border-left: 2px solid #000000 !important;
-			border-right: 2px solid #000000 !important;
-			border-top: 2px solid #000000 !important;
-			color: #000000 !important
-		}
-
-		body {
-			background-color: #ffffff;
-			color: #000000;
-			font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif
-		}
-
-		a {
-			color: #ffffff
-		}
-
-		* {
-			box-sizing: border-box
-		}
-
-		body,
-		h2,
-		p {
-			margin: 0
-		}
-
-		.bee-menu .bee-hamburger-trigger {
-			display: none
-		}
-
-		.bee-row-content {
-			max-width: 1355px;
-			margin: 0 auto;
-			display: flex
-		}
-
-		.bee-row-content .bee-col-w2 {
-			flex-basis: 16.6666666667%
-		}
-
-		.bee-row-content .bee-col-w3 {
-			flex-basis: 25%
-		}
-
-		.bee-row-content .bee-col-w6 {
-			flex-basis: 50%
-		}
-
-		.bee-row-content .bee-col-w8 {
-			flex-basis: 66.6666666667%
-		}
-
-		.bee-row-8 .bee-col-1 .bee-block-4 div.label:not(.inline),
-		.bee-row-8 .bee-col-1 .bee-block-4 label:not(.inline),
-		.bee-row-content .bee-col-w12 {
-			flex-basis: 100%
-		}
-
-		.bee-button a,
-		.bee-menu ul li a {
-			text-decoration: none
-		}
-
-		.bee-divider,
-		.bee-image {
-			overflow: auto
-		}
-
-		.bee-divider .center {
-			margin: 0 auto
-		}
-
-		.bee-form .bee-form-row.bee-form-row-multicolumn {
-			display: flex
-		}
-
-		.bee-form .bee-form-row.bee-form-row-multicolumn input:not([type=checkbox]):not([type=radio]),
-		.bee-row-3 .bee-col-1 .bee-block-2,
-		.bee-row-3 .bee-col-2 .bee-block-2,
-		.bee-row-5 .bee-col-1 .bee-block-1,
-		.bee-row-5 .bee-col-2 .bee-block-1,
-		.bee-row-5 .bee-col-3 .bee-block-1,
-		.bee-row-5 .bee-col-4 .bee-block-1,
-		.bee-row-8 .bee-col-1 .bee-block-4 .bee-form-row:not(.bee-sidelabel) input:not([type=checkbox]):not([type=radio]) {
-			width: 100%
-		}
-
-		.bee-form .bee-form-row .bee-field {
-			padding: 3px;
-			display: flex;
-			flex: 1;
-			flex-wrap: wrap;
-			align-items: center
-		}
-
-		.bee-form .bee-form-row .bee-field input:not([type=checkbox]):not([type=radio]) {
-			flex-grow: 1;
-			font-family: inherit;
-			font-size: inherit
-		}
-
-		.bee-form .bee-form-row .bee-field input[type=checkbox]:not(:first-of-type) {
-			margin-left: 15px
-		}
-
-		.bee-form .bee-form-row .bee-field button {
-			font-family: inherit;
-			font-size: inherit;
-			cursor: pointer
-		}
-
-		.bee-form .bee-form-row .bee-field .bee-button-container {
-			flex-grow: 1
-		}
-
-		.bee-form input[type=color] {
-			border: none;
-			height: 38px
-		}
-
-		.bee-row-1 .bee-row-content,
-		.bee-row-2 .bee-row-content,
-		.bee-row-3 .bee-row-content,
-		.bee-row-4 .bee-row-content,
-		.bee-row-5 .bee-row-content,
-		.bee-row-6 .bee-row-content,
-		.bee-row-7 .bee-row-content {
-			background-repeat: no-repeat;
-			border-radius: 0;
-			color: #000000
-		}
-
-		.bee-form input[type=color]::-webkit-color-swatch-wrapper {
-			margin: 0;
-			padding: 2px
-		}
-
-		.bee-form input[type=color]::-webkit-color-swatch {
-			margin: 0;
-			padding: 0
-		}
-
-		.bee-image img {
-			display: block;
-			width: 100%
-		}
-
-		.bee-menu .bee-hamburger-controls {
-			cursor: pointer;
-			display: inline-block;
-			position: relative
-		}
-
-		.bee-menu .bee-hamburger-controls span {
-			display: block;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			background-size: 100%;
-			background-repeat: no-repeat;
-			transition: .12s ease-in-out
-		}
-
-		.bee-menu ul {
-			list-style-type: none;
-			margin: 0;
-			padding: 0
-		}
-
-		.bee-menu ul.bee-horizontal li {
-			display: inline-block
-		}
-
-		.bee-paragraph {
-			overflow-wrap: anywhere
-		}
-
-		.bee-social .icon img {
-			max-height: 32px
-		}
-
-		.bee-row-1,
-		.bee-row-2,
-		.bee-row-3,
-		.bee-row-4,
-		.bee-row-5,
-		.bee-row-6,
-		.bee-row-7 {
-			background-color: #ffffff;
-			background-repeat: no-repeat
-		}
-
-		.bee-row-1 .bee-col-1 {
-			padding: 10px 10px 10px 60px;
-			display: flex;
-			flex-direction: column;
-			justify-content: center
-		}
-
-		.bee-row-1 .bee-col-1 .bee-block-1 {
-			padding: 25px;
-			width: 100%
-		}
-
-		.bee-row-1 .bee-col-2 {
-			padding: 10px 20px;
-			display: flex;
-			flex-direction: column;
-			justify-content: center
-		}
-
-		.bee-row-1 .bee-col-2 .bee-block-1 {
-			color: #040b22;
-			font-family: inherit;
-			font-size: 16px;
-			font-weight: 500;
-			padding: 10px;
-			text-align: center
-		}
-
-		.bee-row-1 .bee-col-3 {
-			padding-right: 50px;
-			display: flex;
-			flex-direction: column;
-			justify-content: center
-		}
-
-		.bee-row-1 .bee-col-3 .bee-block-1 {
-			padding: 5px 25px;
-			text-align: right
-		}
-
-		.bee-row-2 .bee-row-content,
-		.bee-row-6 .bee-row-content {
-			background-color: #ffffff;
-			padding: 20px 60px 24px
-		}
-
-		.bee-row-2 .bee-col-1,
-		.bee-row-3 .bee-col-1,
-		.bee-row-4 .bee-col-1,
-		.bee-row-6 .bee-col-1,
-		.bee-row-8 .bee-col-1 {
-			padding-left: 40px
-		}
-
-		.bee-row-2 .bee-col-1 .bee-block-2,
-		.bee-row-4 .bee-col-1 .bee-block-1,
-		.bee-row-6 .bee-col-1 .bee-block-1 {
-			padding-left: 2px;
-			padding-right: 10px;
-			text-align: center;
-			width: 100%
-		}
-
-		.bee-row-2 .bee-col-1 .bee-block-3,
-		.bee-row-4 .bee-col-1 .bee-block-2,
-		.bee-row-6 .bee-col-1 .bee-block-2,
-		.bee-row-9 .bee-col-1 .bee-block-1 {
-			padding-bottom: 10px;
-			padding-top: 10px
-		}
-
-		.bee-row-3 .bee-row-content {
-			background-color: #ffffff;
-			padding-bottom: 20px;
-			padding-left: 60px;
-			padding-right: 60px
-		}
-
-		.bee-row-3 .bee-col-1 .bee-block-3,
-		.bee-row-3 .bee-col-2 .bee-block-3 {
-			padding: 24px 10px 10px 2px
-		}
-
-		.bee-row-3 .bee-col-1 .bee-block-4,
-		.bee-row-3 .bee-col-2 .bee-block-4 {
-			padding: 2px 10px 16px 2px
-		}
-
-		.bee-row-3 .bee-col-1 .bee-block-5,
-		.bee-row-3 .bee-col-2 .bee-block-5 {
-			padding-bottom: 10px;
-			padding-right: 10px;
-			text-align: left
-		}
-
-		.bee-row-3 .bee-col-2 {
-			padding-right: 40px
-		}
-
-		.bee-row-4 .bee-row-content {
-			background-color: #ffffff;
-			padding: 45px 60px 24px
-		}
-
-		.bee-row-5 .bee-row-content,
-		.bee-row-7 .bee-row-content {
-			background-color: #ffffff;
-			padding-bottom: 60px;
-			padding-left: 60px;
-			padding-right: 60px
-		}
-
-		.bee-row-5 .bee-col-1,
-		.bee-row-7 .bee-col-1 {
-			padding-left: 40px;
-			border-radius: 24px
-		}
-
-		.bee-row-5 .bee-col-1 .bee-block-2,
-		.bee-row-5 .bee-col-2 .bee-block-2,
-		.bee-row-5 .bee-col-3 .bee-block-2,
-		.bee-row-5 .bee-col-4 .bee-block-2,
-		.bee-row-7 .bee-col-1 .bee-block-2,
-		.bee-row-7 .bee-col-2 .bee-block-2,
-		.bee-row-7 .bee-col-3 .bee-block-2,
-		.bee-row-7 .bee-col-4 .bee-block-2 {
-			padding-left: 2px;
-			padding-right: 10px;
-			padding-top: 24px
-		}
-
-		.bee-row-5 .bee-col-1 .bee-block-3,
-		.bee-row-5 .bee-col-2 .bee-block-3,
-		.bee-row-5 .bee-col-3 .bee-block-3,
-		.bee-row-5 .bee-col-4 .bee-block-3,
-		.bee-row-8 .bee-col-1 .bee-block-3 {
-			padding: 2px 60px 16px 2px
-		}
-
-		.bee-row-5 .bee-col-2,
-		.bee-row-5 .bee-col-3,
-		.bee-row-7 .bee-col-2,
-		.bee-row-7 .bee-col-3 {
-			padding-left: 20px;
-			padding-right: 20px;
-			border-radius: 24px
-		}
-
-		.bee-row-5 .bee-col-4,
-		.bee-row-7 .bee-col-4 {
-			padding-right: 40px;
-			border-radius: 24px
-		}
-
-		.bee-row-8 .bee-row-content,
-		.bee-row-9 .bee-row-content {
-			background-color: #f5f5f7;
-			background-repeat: no-repeat;
-			border-radius: 0;
-			color: #000000
-		}
-
-		.bee-row-7 .bee-col-1 .bee-block-1,
-		.bee-row-7 .bee-col-2 .bee-block-1,
-		.bee-row-7 .bee-col-3 .bee-block-1,
-		.bee-row-7 .bee-col-4 .bee-block-1 {
-			padding-left: 60px;
-			width: 100%
-		}
-
-		.bee-row-8,
-		.bee-row-9 {
-			background-color: #f5f5f7;
-			background-repeat: no-repeat
-		}
-
-		.bee-row-8 .bee-row-content {
-			padding-left: 60px;
-			padding-right: 60px;
-			padding-top: 60px
-		}
-
-		.bee-row-8 .bee-col-1 .bee-block-1 {
-			padding-bottom: 15px;
-			width: 100%
-		}
-
-		.bee-row-8 .bee-col-1 .bee-block-2 {
-			padding: 24px 10px 2px 2px
-		}
-
-		.bee-row-8 .bee-col-1 .bee-block-4 {
-			font-family: Inter, Helvetica;
-			font-size: 16px;
-			font-weight: 400;
-			padding-right: 10px
-		}
-
-		.bee-row-8 .bee-col-1 .bee-block-6 {
-			padding: 10px 20px;
-			text-align: left
-		}
-
-		.bee-row-8 .bee-col-2,
-		.bee-row-8 .bee-col-3,
-		.bee-row-8 .bee-col-4 {
-			padding-bottom: 5px;
-			padding-top: 10px
-		}
-
-		.bee-row-8 .bee-col-2 .bee-block-1,
-		.bee-row-8 .bee-col-3 .bee-block-1,
-		.bee-row-8 .bee-col-4 .bee-block-1 {
-			padding-bottom: 4px;
-			padding-left: 2px;
-			padding-right: 60px
-		}
-
-		.bee-row-8 .bee-col-2 .bee-block-2,
-		.bee-row-8 .bee-col-3 .bee-block-2,
-		.bee-row-8 .bee-col-4 .bee-block-2 {
-			padding: 2px 60px 24px 2px
-		}
-
-		.bee-row-9 .bee-row-content {
-			padding-bottom: 60px;
-			padding-left: 60px;
-			padding-right: 60px
-		}
-
-		.bee-row-9 .bee-col-1 {
-			padding: 5px 40px
-		}
-
-		.bee-row-1 .bee-col-2 .bee-block-1 li {
-			padding-left: 28px;
-			padding-right: 28px
-		}
-
-		.bee-row-1 .bee-col-2 .bee-block-1 li a,
-		.bee-row-3 .bee-col-1 .bee-block-3 a,
-		.bee-row-3 .bee-col-2 .bee-block-3 a,
-		.bee-row-5 .bee-col-1 .bee-block-2 a,
-		.bee-row-5 .bee-col-2 .bee-block-2 a,
-		.bee-row-5 .bee-col-3 .bee-block-2 a,
-		.bee-row-5 .bee-col-4 .bee-block-2 a,
-		.bee-row-7 .bee-col-1 .bee-block-2 a,
-		.bee-row-7 .bee-col-2 .bee-block-2 a,
-		.bee-row-7 .bee-col-3 .bee-block-2 a,
-		.bee-row-7 .bee-col-4 .bee-block-2 a,
-		.bee-row-8 .bee-col-1 .bee-block-2 a,
-		.bee-row-8 .bee-col-2 .bee-block-1 a,
-		.bee-row-8 .bee-col-3 .bee-block-1 a,
-		.bee-row-8 .bee-col-4 .bee-block-1 a {
-			color: #040b22
-		}
-
-		.bee-row-2 .bee-col-1 .bee-block-2 h2 {
-			color: #040b22;
-			direction: ltr;
-			font-family: Inter, Helvetica;
-			font-size: 40px;
-			font-weight: 700;
-			letter-spacing: -1px;
-			line-height: 120%;
-			text-align: center
-		}
-
-		.bee-row-1 .bee-col-3 .bee-block-1 a,
-		.bee-row-3 .bee-col-1 .bee-block-5 a {
-			font-weight: 400;
-			background-color: #000000;
-			border-radius: 32px;
-			padding: 5px 24px;
-			width: auto;
-			direction: ltr;
-			font-family: Inter, Helvetica
-		}
-
-		@media (max-width:768px) {
-			.bee-form-row-multicolumn {
-				display: block !important
-			}
-
-			.bee-form form {
-				width: 100% !important
-			}
-
-			.bee-menu ul.with-bee-hamburger {
-				display: none;
-				padding: 5px 0;
-				position: relative;
-				top: -4px
-			}
-
-			.bee-menu ul.with-bee-hamburger li {
-				display: block;
-				text-align: center
-			}
-
-			.bee-menu ul.with-bee-hamburger li a {
-				text-decoration: none
-			}
-
-			.bee-menu ul.with-bee-hamburger span,
-			.bee-mobile_hide {
-				display: none
-			}
-
-			#bee-hamburger-menu-r0c1m0:checked~ul,
-			.bee-row-content:not(.no_stack) {
-				display: block
-			}
-
-			.bee-row-1 .bee-col-1,
-			.bee-row-2 .bee-col-1,
-			.bee-row-3 .bee-col-1,
-			.bee-row-3 .bee-col-2,
-			.bee-row-4 .bee-col-1,
-			.bee-row-5 .bee-col-1,
-			.bee-row-5 .bee-col-2,
-			.bee-row-5 .bee-col-3,
-			.bee-row-6 .bee-col-1,
-			.bee-row-7 .bee-col-1,
-			.bee-row-7 .bee-col-2,
-			.bee-row-7 .bee-col-3,
-			.bee-row-8 .bee-col-1 {
-				padding: 0 !important
-			}
-
-			.bee-row-2 .bee-row-content,
-			.bee-row-4 .bee-row-content,
-			.bee-row-6 .bee-row-content {
-				padding: 32px 16px 16px !important
-			}
-
-			.bee-row-3 .bee-row-content {
-				padding: 32px 16px !important
-			}
-
-			.bee-row-5 .bee-row-content,
-			.bee-row-7 .bee-row-content,
-			.bee-row-9 .bee-row-content {
-				padding: 0 16px 32px !important
-			}
-
-			.bee-row-8 .bee-row-content {
-				padding: 32px 16px 0 !important
-			}
-
-			.bee-row-9 .bee-col-1 {
-				padding: 5px !important
-			}
-
-			.bee-row-3 .bee-col-1 {
-				margin-bottom: 30px !important
-			}
-
-			.bee-row-5 .bee-col-1,
-			.bee-row-5 .bee-col-2,
-			.bee-row-5 .bee-col-3,
-			.bee-row-7 .bee-col-1,
-			.bee-row-7 .bee-col-2,
-			.bee-row-7 .bee-col-3 {
-				margin-bottom: 10px !important
-			}
-
-			.bee-row-1 .bee-col-2 .bee-block-1 .bee-hamburger-controls {
-				width: 36px;
-				height: 36px;
-				background-color: #000000;
-				border-radius: 0
-			}
-
-			.bee-row-1 .bee-col-2 .bee-block-1 .bee-hamburger-controls span {
-				width: 18px;
-				height: 18px
-			}
-
-			.bee-row-1 .bee-col-2 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-open {
-				background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjZmZmZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgd2lkdGg9IjY0IiB5PSI1MiIvPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiIHk9IjI2Ii8+PC9nPjwvc3ZnPg==");
-				transform: translate(-50%, -50%) scaleY(1)
-			}
-
-			.bee-row-1 .bee-col-2 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-close {
-				background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjZmZmZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB0cmFuc2Zvcm09Im1hdHJpeCgtLjcwNzEwNjc4IC0uNzA3MTA2NzggLjcwNzEwNjc4IC0uNzA3MTA2NzggMzEuOTkxMzc4IDc3LjIzNDAxOSkiIHdpZHRoPSI4MiIgeD0iLTkuMDA4NjIyIiB5PSIyNS45OTEzNzgiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgdHJhbnNmb3JtPSJtYXRyaXgoLS43MDcxMDY3OCAuNzA3MTA2NzggLS43MDcxMDY3OCAtLjcwNzEwNjc4IDc3LjgxOTgwNiAzMi4yMzQwMTkpIiB3aWR0aD0iODIiIHg9Ii04Ljc2NTk4MSIgeT0iMjYuMjM0MDE5Ii8+PC9nPjwvc3ZnPg==");
-				transform: translate(-50%, -50%) scaleY(0)
-			}
-
-			.bee-row-1 .bee-col-2 .bee-block-1 ul.with-bee-hamburger {
-				background-color: #000000
-			}
-
-			.bee-row-1 .bee-col-2 .bee-block-1 ul.with-bee-hamburger li,
-			.bee-row-1 .bee-col-2 .bee-block-1 ul.with-bee-hamburger li a {
-				color: #ffffff
-			}
-
-			#bee-hamburger-menu-r0c1m0:checked~.bee-hamburger-controls .bee-hamburger-open {
-				transform: translate(-50%, -50%) scaleY(0)
-			}
-
-			#bee-hamburger-menu-r0c1m0:checked~.bee-hamburger-controls .bee-hamburger-close {
-				transform: translate(-50%, -50%) scaleY(1)
-			}
-
-			.bee-row-1 .bee-col-2 .bee-block-1 {
-				padding: 10px !important;
-				text-align: right !important
-			}
-
-			.bee-row-1 .bee-col-2 .bee-block-1 li {
-				font-size: 16px !important;
-				line-height: auto !important
-			}
-
-			.bee-row-2 .bee-col-1 .bee-block-2 {
-				padding: 0 0 8px 1px;
-				text-align: left
-			}
-
-			.bee-row-2 .bee-col-1 .bee-block-2 h2 {
-				font-size: 24px;
-				text-align: left
-			}
-
-			.bee-row-1 .bee-col-3 .bee-block-1 {
-				padding: 8px 0 0 !important;
-				text-align: left !important
-			}
-
-			.bee-row-1 .bee-col-3 .bee-block-1 .bee-button-content {
-				font-size: initial !important;
-				line-height: normal !important;
-				text-align: center !important
-			}
-
-			.bee-row-1 .bee-col-3 .bee-block-1 a,
-			.bee-row-1 .bee-col-3 .bee-block-1 span {
-				text-align: center !important;
-				font-size: 16px !important;
-				line-height: auto !important
-			}
-		}
-
-		.bee-row-1 .bee-col-3 .bee-block-1 a:hover {
-			background-color: #ffffff !important
-		}
-
-		.bee-row-1 .bee-col-3 .bee-block-1 a {
-			color: #ffffff;
-			font-size: 14px;
-			letter-spacing: 0;
-			line-height: 200%
-		}
-
-		.bee-row-3 .bee-col-1 .bee-block-3,
-		.bee-row-3 .bee-col-2 .bee-block-3 {
-			color: #040b22;
-			direction: ltr;
-			font-family: Inter, Helvetica;
-			font-size: 23px;
-			font-weight: 600;
-			letter-spacing: -1px;
-			line-height: 130%;
-			text-align: left
-		}
-
-		.bee-row-3 .bee-col-1 .bee-block-3 p:not(:last-child),
-		.bee-row-3 .bee-col-2 .bee-block-3 p:not(:last-child) {
-			margin-bottom: 22px
-		}
-
-		.bee-row-3 .bee-col-1 .bee-block-4,
-		.bee-row-3 .bee-col-2 .bee-block-4,
-		.bee-row-5 .bee-col-1 .bee-block-3,
-		.bee-row-5 .bee-col-2 .bee-block-3,
-		.bee-row-5 .bee-col-3 .bee-block-3,
-		.bee-row-5 .bee-col-4 .bee-block-3 {
-			color: #4a4f5f;
-			direction: ltr;
-			font-family: Inter, Helvetica;
-			font-size: 20px;
-			font-weight: 300;
-			letter-spacing: -1px;
-			line-height: 150%;
-			text-align: left
-		}
-
-		.bee-row-3 .bee-col-1 .bee-block-4 a,
-		.bee-row-3 .bee-col-2 .bee-block-4 a,
-		.bee-row-5 .bee-col-1 .bee-block-3 a,
-		.bee-row-5 .bee-col-2 .bee-block-3 a,
-		.bee-row-5 .bee-col-3 .bee-block-3 a,
-		.bee-row-5 .bee-col-4 .bee-block-3 a,
-		.bee-row-8 .bee-col-1 .bee-block-3 a,
-		.bee-row-8 .bee-col-2 .bee-block-2 a,
-		.bee-row-8 .bee-col-3 .bee-block-2 a,
-		.bee-row-8 .bee-col-4 .bee-block-2 a,
-		.bee-row-9 .bee-col-1 .bee-block-2 a {
-			color: #4a4f5f
-		}
-
-		.bee-row-3 .bee-col-1 .bee-block-4 p:not(:last-child),
-		.bee-row-3 .bee-col-2 .bee-block-4 p:not(:last-child),
-		.bee-row-5 .bee-col-1 .bee-block-3 p:not(:last-child),
-		.bee-row-5 .bee-col-2 .bee-block-3 p:not(:last-child),
-		.bee-row-5 .bee-col-3 .bee-block-3 p:not(:last-child),
-		.bee-row-5 .bee-col-4 .bee-block-3 p:not(:last-child),
-		.bee-row-8 .bee-col-1 .bee-block-3 p:not(:last-child),
-		.bee-row-8 .bee-col-2 .bee-block-1 p:not(:last-child),
-		.bee-row-8 .bee-col-3 .bee-block-1 p:not(:last-child),
-		.bee-row-8 .bee-col-4 .bee-block-1 p:not(:last-child) {
-			margin-bottom: 8px
-		}
-
-		.bee-row-2 .bee-col-1 .bee-block-3,
-		.bee-row-4 .bee-col-1 .bee-block-2,
-		.bee-row-6 .bee-col-1 .bee-block-2 {
-			color: #000000;
-			direction: ltr;
-			font-size: 16px;
-			font-weight: 300;
-			letter-spacing: 0;
-			line-height: 120%;
-			text-align: center
-		}
-
-		.bee-row-2 .bee-col-1 .bee-block-3 a,
-		.bee-row-4 .bee-col-1 .bee-block-2 a,
-		.bee-row-6 .bee-col-1 .bee-block-2 a {
-			color: #8a3b8f
-		}
-
-		.bee-row-2 .bee-col-1 .bee-block-3 p:not(:last-child),
-		.bee-row-4 .bee-col-1 .bee-block-2 p:not(:last-child),
-		.bee-row-6 .bee-col-1 .bee-block-2 p:not(:last-child),
-		.bee-row-8 .bee-col-2 .bee-block-2 p:not(:last-child),
-		.bee-row-8 .bee-col-3 .bee-block-2 p:not(:last-child),
-		.bee-row-8 .bee-col-4 .bee-block-2 p:not(:last-child) {
-			margin-bottom: 16px
-		}
-
-		@media (max-width:768px) {
-
-			.bee-row-3 .bee-col-1 .bee-block-3,
-			.bee-row-3 .bee-col-2 .bee-block-3 {
-				padding: 16px 2px 0 1px !important;
-				text-align: left !important;
-				font-size: 20px !important
-			}
-
-			.bee-row-3 .bee-col-1 .bee-block-4 {
-				padding: 4px 2px 0 1px !important;
-				text-align: left !important;
-				font-size: 16px !important
-			}
-
-			.bee-row-2 .bee-col-1 .bee-block-3 {
-				text-align: left !important
-			}
-
-			.bee-row-3 .bee-col-1 .bee-block-5 {
-				padding: 12px 0 16px !important;
-				text-align: left !important
-			}
-
-			.bee-row-3 .bee-col-1 .bee-block-5 .bee-button-content {
-				font-size: initial !important;
-				line-height: normal !important;
-				text-align: center !important
-			}
-
-			.bee-row-3 .bee-col-1 .bee-block-5 a,
-			.bee-row-3 .bee-col-1 .bee-block-5 span {
-				text-align: center !important;
-				font-size: 16px !important;
-				line-height: auto !important
-			}
-		}
-
-		.bee-row-3 .bee-col-1 .bee-block-5 a:hover,
-		.bee-row-3 .bee-col-2 .bee-block-5 a:hover {
-			background-color: transparent !important
-		}
-
-		.bee-row-3 .bee-col-1 .bee-block-5 a {
-			color: #ffffff;
-			font-size: 16px;
-			letter-spacing: 0;
-			line-height: 200%
-		}
-
-		.bee-row-4 .bee-col-1 .bee-block-1 h2,
-		.bee-row-6 .bee-col-1 .bee-block-1 h2 {
-			color: #040b22;
-			direction: ltr;
-			font-family: Inter, Helvetica;
-			font-size: 40px;
-			font-weight: 600;
-			letter-spacing: -1px;
-			line-height: 120%;
-			text-align: center
-		}
-
-		@media (max-width:768px) {
-			.bee-row-3 .bee-col-2 .bee-block-4 {
-				padding: 4px 2px 0 1px !important;
-				text-align: left !important;
-				font-size: 16px !important
-			}
-
-			.bee-row-4 .bee-col-1 .bee-block-1 {
-				padding: 0 0 8px 1px;
-				text-align: left
-			}
-
-			.bee-row-4 .bee-col-1 .bee-block-1 h2 {
-				font-size: 24px;
-				text-align: left
-			}
-
-			.bee-row-3 .bee-col-2 .bee-block-5 {
-				padding: 12px 0 16px !important;
-				text-align: left !important
-			}
-
-			.bee-row-3 .bee-col-2 .bee-block-5 .bee-button-content {
-				font-size: initial !important;
-				line-height: normal !important;
-				text-align: center !important
-			}
-
-			.bee-row-3 .bee-col-2 .bee-block-5 a,
-			.bee-row-3 .bee-col-2 .bee-block-5 span {
-				text-align: center !important;
-				font-size: 16px !important;
-				line-height: auto !important
-			}
-
-			.bee-row-4 .bee-col-1 .bee-block-2 {
-				text-align: left !important
-			}
-		}
-
-		.bee-row-3 .bee-col-2 .bee-block-5 a {
-			background-color: #000000;
-			border-bottom: 0 dashed transparent;
-			border-left: 0 dashed transparent;
-			border-radius: 32px;
-			border-right: 0px dashed transparent;
-			border-top: 0 dashed transparent;
-			color: #ffffff;
-			direction: ltr;
-			font-family: Inter, Helvetica;
-			font-size: 16px;
-			font-weight: 400;
-			letter-spacing: 0;
-			line-height: 200%;
-			padding: 5px 24px;
-			width: auto
-		}
-
-		.bee-row-5 .bee-col-1 .bee-block-2,
-		.bee-row-5 .bee-col-2 .bee-block-2,
-		.bee-row-5 .bee-col-3 .bee-block-2,
-		.bee-row-5 .bee-col-4 .bee-block-2 {
-			color: #040b22;
-			direction: ltr;
-			font-family: Inter, Helvetica;
-			font-size: 24px;
-			font-weight: 600;
-			letter-spacing: -1px;
-			line-height: 130%;
-			text-align: left
-		}
-
-		.bee-row-5 .bee-col-1 .bee-block-2 p:not(:last-child),
-		.bee-row-5 .bee-col-2 .bee-block-2 p:not(:last-child),
-		.bee-row-5 .bee-col-3 .bee-block-2 p:not(:last-child),
-		.bee-row-5 .bee-col-4 .bee-block-2 p:not(:last-child),
-		.bee-row-7 .bee-col-1 .bee-block-2 p:not(:last-child),
-		.bee-row-7 .bee-col-2 .bee-block-2 p:not(:last-child),
-		.bee-row-7 .bee-col-3 .bee-block-2 p:not(:last-child),
-		.bee-row-7 .bee-col-4 .bee-block-2 p:not(:last-child) {
-			margin-bottom: 24px
-		}
-
-		.bee-row-7 .bee-col-1 .bee-block-2,
-		.bee-row-7 .bee-col-2 .bee-block-2,
-		.bee-row-7 .bee-col-3 .bee-block-2,
-		.bee-row-7 .bee-col-4 .bee-block-2 {
-			color: #040b22;
-			direction: ltr;
-			font-family: Inter, Helvetica;
-			font-size: 24px;
-			font-weight: 600;
-			letter-spacing: -1px;
-			line-height: 130%;
-			text-align: center
-		}
-
-		.bee-row-8 .bee-col-1 .bee-block-2 {
-			color: #040b22;
-			direction: ltr;
-			font-family: Inter, Helvetica;
-			font-size: 32px;
-			font-weight: 600;
-			letter-spacing: -1px;
-			line-height: 130%;
-			text-align: left
-		}
-
-		.bee-row-8 .bee-col-1 .bee-block-2 p:not(:last-child) {
-			margin-bottom: 32px
-		}
-
-		.bee-row-8 .bee-col-1 .bee-block-3 {
-			color: #4a4f5f;
-			direction: ltr;
-			font-family: Inter, Helvetica;
-			font-size: 16px;
-			font-weight: 300;
-			letter-spacing: -1px;
-			line-height: 130%;
-			text-align: left
-		}
-
-		.bee-row-8 .bee-col-2 .bee-block-2,
-		.bee-row-8 .bee-col-3 .bee-block-2,
-		.bee-row-8 .bee-col-4 .bee-block-2 {
-			color: #4a4f5f;
-			direction: ltr;
-			font-family: Inter, Helvetica;
-			font-size: 14px;
-			font-weight: 300;
-			letter-spacing: 0;
-			line-height: 140%;
-			text-align: left
-		}
-
-		.bee-row-8 .bee-col-2 .bee-block-1,
-		.bee-row-8 .bee-col-3 .bee-block-1,
-		.bee-row-8 .bee-col-4 .bee-block-1 {
-			color: #040b22;
-			direction: ltr;
-			font-family: Inter, Helvetica;
-			font-size: 16px;
-			font-weight: 600;
-			letter-spacing: -1px;
-			line-height: 130%;
-			text-align: left
-		}
-
-		.bee-row-9 .bee-col-1 .bee-block-2 {
-			color: #4a4f5f;
-			direction: ltr;
-			font-family: Inter, Helvetica;
-			font-size: 14px;
-			font-weight: 300;
-			letter-spacing: 0;
-			line-height: 150%;
-			text-align: left
-		}
-
-		.bee-row-9 .bee-col-1 .bee-block-2 p:not(:last-child) {
-			margin-bottom: 0
-		}
-
-		.bee-row-8 .bee-col-1 .bee-block-4,
-		.bee-row-8 .bee-col-1 .bee-block-4 .bee-button-container {
-			text-align: left
-		}
-
-		.bee-row-8 .bee-col-1 .bee-block-4 form {
-			display: inline-block;
-			width: 100%
-		}
-
-		.bee-row-8 .bee-col-1 .bee-block-4 div.label,
-		.bee-row-8 .bee-col-1 .bee-block-4 label {
-			color: #4a4f5f;
-			letter-spacing: normal;
-			line-height: 180%;
-			text-align: left;
-			display: block
-		}
-
-		.bee-row-8 .bee-col-1 .bee-block-4 ::-webkit-input-placeholder {
-			color: #4a4f5f
-		}
-
-		.bee-row-8 .bee-col-1 .bee-block-4 :-moz-placeholder {
-			color: #4a4f5f
-		}
-
-		.bee-row-8 .bee-col-1 .bee-block-4 ::-moz-placeholder {
-			color: #4a4f5f
-		}
-
-		.bee-row-8 .bee-col-1 .bee-block-4 :-ms-input-placeholder {
-			color: #4a4f5f
-		}
-
-		.bee-row-8 .bee-col-1 .bee-block-4 .bee-field>label:first-child,
-		.bee-row-8 .bee-col-1 .bee-block-4 div.label {
-			padding: 3px
-		}
-
-		.bee-row-8 .bee-col-1 .bee-block-4 input:not([type=checkbox]):not([type=radio]):not([type=image]) {
-			background-color: #ffffff;
-			border-bottom: 1px solid #d9d9d9;
-			border-left: 1px solid #d9d9d9;
-			border-radius: 24px;
-			border-right: 1px solid #d9d9d9;
-			border-top: 1px solid #d9d9d9;
-			color: #4a4f5f;
-			padding: 5px 8px;
-			min-height: 38.8px
-		}
-
-		.bee-row-8 .bee-col-1 .bee-block-4 input:not([type=checkbox]):not([type=radio]):focus {
-			outline-color: #ece9ff
-		}
-
-		.bee-row-8 .bee-col-1 .bee-block-4 button {
-			background-color: #000000;
-			border-bottom: 0 solid transparent;
-			border-left: 0 solid transparent;
-			border-radius: 24px;
-			border-right: 0px solid transparent;
-			border-top: 0 solid transparent;
-			color: #ffffff;
-			letter-spacing: normal;
-			line-height: 200%;
-			padding: 5px 24px;
-			width: auto
-		}
-
-		@media (max-width:768px) {
-
-			.bee-row-5 .bee-col-1 .bee-block-3,
-			.bee-row-5 .bee-col-2 .bee-block-3 {
-				padding: 4px 30px 24px 1px !important;
-				text-align: left !important;
-				font-size: 16px !important
-			}
-
-			.bee-row-5 .bee-col-1 .bee-block-2,
-			.bee-row-5 .bee-col-2 .bee-block-2,
-			.bee-row-5 .bee-col-3 .bee-block-2,
-			.bee-row-5 .bee-col-4 .bee-block-2,
-			.bee-row-7 .bee-col-1 .bee-block-2,
-			.bee-row-7 .bee-col-2 .bee-block-2,
-			.bee-row-7 .bee-col-3 .bee-block-2,
-			.bee-row-7 .bee-col-4 .bee-block-2 {
-				padding: 16px 0 0 1px !important;
-				text-align: left !important;
-				font-size: 20px !important
-			}
-
-			.bee-row-5 .bee-col-3 .bee-block-3,
-			.bee-row-5 .bee-col-4 .bee-block-3 {
-				padding: 4px 30px 16px 1px !important;
-				text-align: left !important;
-				font-size: 16px !important
-			}
-
-			.bee-row-6 .bee-col-1 .bee-block-1 {
-				padding: 0 0 8px 1px;
-				text-align: left
-			}
-
-			.bee-row-6 .bee-col-1 .bee-block-1 h2 {
-				font-size: 24px;
-				text-align: left
-			}
-
-			.bee-row-6 .bee-col-1 .bee-block-2 {
-				text-align: left !important
-			}
-
-			.bee-row-8 .bee-col-1 .bee-block-2 {
-				padding: 0 0 0 2px !important;
-				text-align: left !important;
-				font-size: 20px !important
-			}
-
-			.bee-row-8 .bee-col-1 .bee-block-3 {
-				padding: 0 0 8px 2px !important;
-				text-align: left !important;
-				font-size: 16px !important
-			}
-
-			.bee-row-8 .bee-col-2 .bee-block-2 {
-				padding: 8px 2px 5px !important;
-				text-align: left !important;
-				font-size: 15px !important
-			}
-
-			.bee-row-8 .bee-col-2 .bee-block-1,
-			.bee-row-8 .bee-col-3 .bee-block-1,
-			.bee-row-8 .bee-col-4 .bee-block-1 {
-				padding: 8px 2px 5px !important;
-				text-align: left !important;
-				font-size: 16px !important
-			}
-
-			.bee-row-8 .bee-col-3 .bee-block-2,
-			.bee-row-8 .bee-col-4 .bee-block-2,
-			.bee-row-9 .bee-col-1 .bee-block-2 {
-				padding: 8px 2px 5px !important;
-				text-align: left !important;
-				font-size: 14px !important
-			}
-
-			.bee-row-9 .bee-col-1 .bee-block-1 {
-				padding: 10px 0 !important
-			}
-
-			.bee-row-9 .bee-col-1 .bee-block-1 .bee-separator {
-				float: none !important;
-				margin: 0 auto !important
-			}
-
-			.bee-row-8 .bee-col-1 .bee-block-4 {
-				padding: 0 !important
-			}
-
-			.bee-row-8 .bee-col-1 .bee-block-4 button,
-			.bee-row-8 .bee-col-1 .bee-block-4 input,
-			.bee-row-8 .bee-col-1 .bee-block-4 label {
-				font-size: 16px !important
-			}
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METY Technology - Unlock Your Longevity Potential</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background: #1a1a2e;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070") center/cover;
+            z-index: -2;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: -1;
+        }
+
+        /* Navigation */
+        nav{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 20px 0;
+        }
+
+        nav .nav-content{
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+        }
+
+        nav .logo{
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        nav ul{
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a{
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+
+        nav ul li a:hover{
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+        }
+
+        /* Hero Carousel Section */
+        .hero-section{
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 80px;
+        }
+
+        .container{
+            position: relative;
+            width: 1000px;
+            height: 600px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .container .slide .item{
+            width: 200px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            border-radius: 20px;
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.4);
+            background-position: 50% 50%;
+            background-size: cover;
+            display: inline-block;
+            transition: 0.5s;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+        }
+
+        .container .slide .item:hover{
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translate(0, -50%) translateY(-5px);
+        }
+
+        .slide .item:nth-child(1),
+        .slide .item:nth-child(2){
+            top: 0;
+            left: 0;
+            transform: translate(0, 0);
+            border-radius: 30px;
+            width: 100%;
+            height: 100%;
+            cursor: default;
+        }
+
+        .slide .item:nth-child(2):hover{
+            transform: translate(0, 0);
+        }
+
+        .slide .item:nth-child(3){
+            left: 50%;
+        }
+
+        .slide .item:nth-child(4){
+            left: calc(50% + 220px);
+        }
+
+        .slide .item:nth-child(5){
+            left: calc(50% + 440px);
+        }
+
+        .slide .item:nth-child(n + 6){
+            left: calc(50% + 660px);
+            opacity: 0;
+        }
+
+        .item .content{
+            position: absolute;
+            top: 50%;
+            left: 100px;
+            width: 300px;
+            text-align: left;
+            color: #eee;
+            transform: translate(0, -50%);
+            display: none;
+        }
+
+        .slide .item:nth-child(2) .content{
+            display: block;
+        }
+
+        .content .name{
+            font-size: 40px;
+            text-transform: uppercase;
+            font-weight: bold;
+            opacity: 0;
+            animation: animate 1s ease-in-out 1 forwards;
+        }
+
+        .content .des{
+            margin-top: 10px;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: animate 1s ease-in-out 0.3s 1 forwards;
+        }
+
+        .content button{
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0;
+            animation: animate 1s ease-in-out 0.6s 1 forwards;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            color: #fff;
+            font-weight: 600;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s;
+        }
+
+        .content button:hover{
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes animate {
+            from{
+                opacity: 0;
+                transform: translate(0, 100px);
+                filter: blur(33px);
+            }
+            to{
+                opacity: 1;
+                transform: translate(0);
+                filter: blur(0);
+            }
+        }
+
+        .button{
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 20px;
+            z-index: 100;
+        }
+
+        .button button{
+            width: 40px;
+            height: 35px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            margin: 0 5px;
+            transition: 0.3s;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            color: #fff;
+        }
+
+        .button button:hover{
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Section Styling */
+        section{
+            padding: 100px 40px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section-container{
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* Benefits Section */
+        .benefits-section{
+            background: url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=2074") center/cover;
+            position: relative;
+        }
+
+        .benefits-section::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .benefits-section .section-container{
+            position: relative;
+            z-index: 1;
+        }
+
+        .benefits-section h2{
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .benefits-section .subtitle{
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 18px;
+            margin-bottom: 60px;
+        }
+
+        .benefits-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-card{
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            transition: all 0.5s;
+            text-align: center;
+        }
+
+        .benefit-card:hover{
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .benefit-card img{
+            width: 100%;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .benefit-card h3{
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .benefit-card p{
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+        }
+
+        /* Features Section */
+        .features-section{
+            background: url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2071") center/cover;
+            position: relative;
+        }
+
+        .features-section::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .features-section .section-container{
+            position: relative;
+            z-index: 1;
+        }
+
+        .features-section h2{
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .features-section .subtitle{
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 18px;
+            margin-bottom: 60px;
+        }
+
+        .features-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card{
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            transition: all 0.5s;
+            text-align: center;
+        }
+
+        .feature-card:hover{
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .feature-card img{
+            width: 131px;
+            height: 131px;
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        .feature-card h3{
+            font-size: 20px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer{
+            padding: 80px 40px 40px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            color: #fff;
+        }
+
+        .footer-content{
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3{
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .footer-section p,
+        .footer-section ul{
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+        }
+
+        .footer-section ul{
+            list-style: none;
+        }
+
+        .footer-section ul li{
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a{
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover{
+            color: #fff;
+        }
+
+        .newsletter-form{
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .newsletter-form input{
+            flex: 1;
+            padding: 12px 20px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .newsletter-form input::placeholder{
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .newsletter-form button{
+            padding: 12px 30px;
+            border-radius: 24px;
+            border: none;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .newsletter-form button:hover{
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .social-links{
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a{
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover{
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom{
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-bottom a{
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-bottom a:hover{
+            color: #fff;
+        }
+
+        @media (max-width: 768px){
+            .container{
+                width: 90%;
+                height: 400px;
+            }
+
+            nav .nav-content{
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav ul{
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .content .name{
+                font-size: 28px;
+            }
+
+            .item .content{
+                left: 40px;
+                width: 250px;
+            }
+
+            .footer-content{
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-grid,
+            .features-grid{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
-
 <body>
-	<div class="bee-page-container">
-		<div class="bee-row bee-row-1">
-			<div class="bee-row-content no_stack">
-				<div class="bee-col bee-col-1 bee-col-w2">
-					<div class="bee-block bee-block-1 bee-image"><a href="https://www.example.com/" target="_blank"><img alt="Logo" class="bee-fixedwidth" src="images/5_METY.png" style="max-width:105px;" title="Logo" /></a></div>
-				</div>
-				<div class="bee-col bee-col-2 bee-col-w8">
-					<div class="bee-block bee-block-1 bee-menu">
-						<nav class="bee-menu"><input class="bee-hamburger-trigger" id="bee-hamburger-menu-r0c1m0" type="checkbox" /><label class="bee-hamburger-controls" for="bee-hamburger-menu-r0c1m0"><span class="bee-hamburger-open"></span><span class="bee-hamburger-close"></span></label>
-							<ul class="bee-horizontal with-bee-hamburger">
-								<li>Home</li>
-								<li>My Youth Span</li>
-								<li>Careers / Internships</li>
-								<li>About</li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-				<div class="bee-col bee-col-3 bee-col-w2">
-					<div class="bee-block bee-block-1 bee-button"><a class="bee-button-content" href="https://metytechnology.com/contact.html" style="font-size: 14px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 14px; line-height: 200%; letter-spacing: normal;">Contact us</span></a></div>
-				</div>
-			</div>
-		</div>
-		<div class="bee-row bee-row-2">
-			<div class="bee-row-content" style="gap:30px;">
-				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="bee-block bee-block-1 bee-spacer bee-mobile_hide">
-						<div class="spacer" style="height:30px;"></div>
-					</div>
-					<div class="bee-block bee-block-2 bee-heading">
-						<h2><span class="tinyMce-placeholder">What's New.</span> </h2>
-					</div>
-					<div class="bee-block bee-block-3 bee-paragraph">
-						<p>Fresh insights and software enhancements to optimize your personalized health plan.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="bee-row bee-row-3">
-			<div class="bee-row-content" style="gap:30px;">
-				<div class="bee-col bee-col-1 bee-col-w6">
-					<div class="bee-block bee-block-1 bee-spacer bee-mobile_hide">
-						<div class="spacer" style="height:30px;"></div>
-					</div>
-					<div class="bee-block bee-block-2 bee-image"><a href="https://metytechnology.com/myyouthspan.html" target="_blank"><img alt="" class="bee-autowidth" src="images/6_b3aacc0b-8745-4b18-9565-374cfbecd6c2.png" style="max-width:562px;border-radius:30px;" title="" /></a></div>
-					<div class="bee-block bee-block-3 bee-paragraph">
-						<p>Unlock Your Longevity And Vitality Potential</p>
-					</div>
-					<div class="bee-block bee-block-4 bee-paragraph">
-						<p>MyYouthspan harnesses the power of AI, machine learning, and cutting-edge science to provide you with personalized recommendations for a longer, healthier life. From diet and exercise to stress reduction and sleep optimization, My Youthspan tailors its insights to your unique needs. </p>
-					</div>
-					<div class="bee-block bee-block-5 bee-button"><a class="bee-button-content" href="https://metytechnology.com/myyouthspan.html" style="font-size: 16px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">Learn More</span></a></div>
-					<div class="bee-block bee-block-6 bee-spacer bee-mobile_hide">
-						<div class="spacer" style="height:30px;"></div>
-					</div>
-				</div>
-				<div class="bee-col bee-col-2 bee-col-w6">
-					<div class="bee-block bee-block-1 bee-spacer bee-mobile_hide">
-						<div class="spacer" style="height:30px;"></div>
-					</div>
-					<div class="bee-block bee-block-2 bee-image"><a href="https://metytechnology.com/news.html" target="_blank"><img alt="" class="bee-autowidth" src="images/7_Evolution_poster.png" style="max-width:562px;border-radius:30px;" title="" /></a></div>
-					<div class="bee-block bee-block-3 bee-paragraph">
-						<p>Expecting to begin pilot programs</p>
-					</div>
-					<div class="bee-block bee-block-4 bee-paragraph">
-						<p>METY Technology expects to begin pilot programs to test its My Youthspan software in the spring of 2024. We are looking for organizations that serve people in the 40 - 80 year old age range who would like to partner with us and have their membership be participants in this program.</p>
-					</div>
-					<div class="bee-block bee-block-5 bee-button"><a class="bee-button-content" href="https://metytechnology.com/news.html" style="font-size: 16px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">Learn More</span></a></div>
-					<div class="bee-block bee-block-6 bee-spacer bee-mobile_hide">
-						<div class="spacer" style="height:30px;"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="bee-row bee-row-4">
-			<div class="bee-row-content" style="gap:30px;">
-				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="bee-block bee-block-1 bee-heading">
-						<h2>Benefits </h2>
-					</div>
-					<div class="bee-block bee-block-2 bee-paragraph">
-						<p>The measurable advantages of shifting from reactive care to proactive vitality.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="bee-row bee-row-5">
-			<div class="bee-row-content" style="gap:10px;">
-				<div class="bee-col bee-col-1 bee-col-w3">
-					<div class="bee-block bee-block-1 bee-image"><a href="https://www.example.com/" target="_blank"><img alt="" class="bee-autowidth" src="images/8_fec65265-f0db-405b-af8a-4e5a21d9a9d0.png" style="max-width:261px;border-radius:20px;" title="" /></a></div>
-					<div class="bee-block bee-block-2 bee-paragraph">
-						<p>Extended Lifespan</p>
-					</div>
-					<div class="bee-block bee-block-3 bee-paragraph">
-						<p>Receive Personalized Recommendations To Potentially Extend Your Lifespan.</p>
-					</div>
-				</div>
-				<div class="bee-col bee-col-2 bee-col-w3">
-					<div class="bee-block bee-block-1 bee-image"><a href="https://www.example.com/" target="_blank"><img alt="" class="bee-autowidth" src="images/9_36aab2598d4bb2a5a3bdb8dc827d2005.jpeg" style="max-width:261px;border-radius:20px;" title="" /></a></div>
-					<div class="bee-block bee-block-2 bee-paragraph">
-						<p>Enhanced Health</p>
-					</div>
-					<div class="bee-block bee-block-3 bee-paragraph">
-						<p>Improve Overall Well-Being Through Evidence-Based Health Practices.</p>
-					</div>
-				</div>
-				<div class="bee-col bee-col-3 bee-col-w3">
-					<div class="bee-block bee-block-1 bee-image"><a href="https://www.example.com/" target="_blank"><img alt="" class="bee-autowidth" src="images/10_e8227d70-ef19-4746-86e8-f81d6cfc2f54.png" style="max-width:261px;border-radius:20px;" title="" /></a></div>
-					<div class="bee-block bee-block-2 bee-paragraph">
-						<p>Tailored Approach</p>
-					</div>
-					<div class="bee-block bee-block-3 bee-paragraph">
-						<p>Get A Customized Plan That Suits Your Lifestyle and Preferences.</p>
-					</div>
-				</div>
-				<div class="bee-col bee-col-4 bee-col-w3">
-					<div class="bee-block bee-block-1 bee-image"><a href="https://www.example.com/" target="_blank"><img alt="" class="bee-autowidth" src="images/11_8ab43410-2121-4fb0-a6a3-c28aae92ff99.png" style="max-width:261px;border-radius:20px;" title="" /></a></div>
-					<div class="bee-block bee-block-2 bee-paragraph">
-						<p>Ongoing Optimization</p>
-					</div>
-					<div class="bee-block bee-block-3 bee-paragraph">
-						<p>Continuously Improve Your Health and Longevity Outcomes Based On Data Insights.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="bee-row bee-row-6">
-			<div class="bee-row-content" style="gap:30px;">
-				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="bee-block bee-block-1 bee-heading">
-						<h2>Key Features </h2>
-					</div>
-					<div class="bee-block bee-block-2 bee-paragraph">
-						<p>Intelligent tools and evidence-based science designed to unlock your longevity potential.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="bee-row bee-row-7">
-			<div class="bee-row-content" style="gap:10px;">
-				<div class="bee-col bee-col-1 bee-col-w3">
-					<div class="bee-block bee-block-1 bee-image"><a href="https://www.example.com/" target="_blank"><img alt="Blog Posts" class="bee-fixedwidth" src="images/12_creative-team.png" style="max-width:131px;border-radius:20px;" title="Blog Posts" /></a></div>
-					<div class="bee-block bee-block-2 bee-paragraph">
-						<p>Personalized Recommendations</p>
-					</div>
-				</div>
-				<div class="bee-col bee-col-2 bee-col-w3">
-					<div class="bee-block bee-block-1 bee-image"><a href="https://www.example.com/" target="_blank"><img alt="Squaring a Backing" class="bee-fixedwidth" src="images/13_connection.png" style="max-width:131px;border-radius:20px;" title="Squaring a Backing" /></a></div>
-					<div class="bee-block bee-block-2 bee-paragraph">
-						<p>Comprehensive Health Areas</p>
-					</div>
-				</div>
-				<div class="bee-col bee-col-3 bee-col-w3">
-					<div class="bee-block bee-block-1 bee-image"><a href="https://www.example.com/" target="_blank"><img alt="Favourite Rulers" class="bee-fixedwidth" src="images/14_routine.png" style="max-width:131px;border-radius:20px;" title="Favourite Rulers" /></a></div>
-					<div class="bee-block bee-block-2 bee-paragraph">
-						<p>Latest Research Integration</p>
-					</div>
-				</div>
-				<div class="bee-col bee-col-4 bee-col-w3">
-					<div class="bee-block bee-block-1 bee-image"><a href="https://www.example.com/" target="_blank"><img alt="Favourite Rulers" class="bee-fixedwidth" src="images/15_top.png" style="max-width:131px;border-radius:20px;" title="Favourite Rulers" /></a></div>
-					<div class="bee-block bee-block-2 bee-paragraph">
-						<p>Data - Analytics Insights</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="bee-row bee-row-8">
-			<div class="bee-row-content">
-				<div class="bee-col bee-col-1 bee-col-w6">
-					<div class="bee-block bee-block-1 bee-image"><img alt="Logo" class="bee-fixedwidth" src="images/16_LOGO.png" style="max-width:375px;" title="Logo" /></div>
-					<div class="bee-block bee-block-2 bee-paragraph">
-						<p>Stay in the loop.</p>
-					</div>
-					<div class="bee-block bee-block-3 bee-paragraph">
-						<p>Thoughtful product updates, sent occasionally.</p>
-					</div>
-					<div class="bee-block bee-block-4 bee-form">
-						<form accept-charset="UTF-8" action="ACTION_PLACEHOLDER" autocomplete="on" enctype="multipart/form-data" method="post" target="_self">
-							<div class="bee-form-row bee-form-row-multicolumn">
-								<div class="bee-field bee-field-r7c0m3r1f1"><input id="r7c0m3r1f1" name="email" placeholder="  email@example.com" required="" type="text" /></div>
-								<div class="bee-field bee-field-r7c0m3r1f2">
-									<div class="bee-button-container"><button id="r7c0m3r1f2" name="submit" type="submit" value="Subscribe">Subscribe</button></div>
-								</div>
-							</div>
-						</form>
-					</div>
-					<div class="bee-block bee-block-5 bee-spacer">
-						<div class="spacer" style="height:25px;"></div>
-					</div>
-					<div class="bee-block bee-block-6 bee-social">
-						<div class="content"><span class="icon" style="padding:0 5px 0 5px;"><a href="https://www.facebook.com/" target="_self"><img alt="Facebook" src="images/17_facebook2x.png" title="facebook" /></a></span><span class="icon" style="padding:0 5px 0 5px;"><a href="https://www.pinterest.com/" target="_blank"><img alt="Pinterest" src="images/18_pinterest2x.png" title="Pinterest" /></a></span><span class="icon" style="padding:0 5px 0 5px;"><a href="https://www.instagram.com" target="_self"><img alt="Instagram" src="images/19_instagram2x.png" title="instagram" /></a></span><span class="icon" style="padding:0 5px 0 5px;"><a href="https://www.youtube.com/" target="_blank"><img alt="YouTube" src="images/20_youtube2x.png" title="YouTube" /></a></span><span class="icon" style="padding:0 5px 0 5px;"><a href="https://www.linkedin.com" target="_self"><img alt="Linkedin" src="images/21_linkedin2x.png" title="linkedin" /></a></span></div>
-					</div>
-				</div>
-				<div class="bee-col bee-col-2 bee-col-w2">
-					<div class="bee-block bee-block-1 bee-paragraph">
-						<p>Explore</p>
-					</div>
-					<div class="bee-block bee-block-2 bee-paragraph">
-						<p id="menu-item-1047"></p>
-						<p>Scientific Foundation<br /><br />How It Works<br /><br />Solutions<br /><br />Longevity<br /><br />Core Pillars<br /><br />Our Technology</p>
-					</div>
-				</div>
-				<div class="bee-col bee-col-3 bee-col-w2">
-					<div class="bee-block bee-block-1 bee-paragraph">
-						<p>Resources</p>
-					</div>
-					<div class="bee-block bee-block-2 bee-paragraph">
-						<p id="menu-item-1054"></p>
-						<p>Longevity Library<br /><br />Research &amp; Studies<br /><br />Vitality Blog<br /><br />Community Insights<br /><br />Health-span Guides<br /><br />Science Updates</p>
-					</div>
-				</div>
-				<div class="bee-col bee-col-4 bee-col-w2">
-					<div class="bee-block bee-block-1 bee-paragraph">
-						<p>More</p>
-					</div>
-					<div class="bee-block bee-block-2 bee-paragraph">
-						<p id="menu-item-1036"></p>
-						<p>About METY Tech<br /><br />Partner Program<br /><br />Advisory Board<br /><br />Press &amp; Media<br /><br />Contact Us<br /><br />Career Opportunities</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="bee-row bee-row-9">
-			<div class="bee-row-content">
-				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="bee-block bee-block-1 bee-divider">
-						<div class="center bee-separator" style="border-top:1px solid #000000;width:100%;"></div>
-					</div>
-					<div class="bee-block bee-block-2 bee-paragraph">
-						<p><strong><span style="color: #444445;"><a href="https://www.example.com/" rel="noopener" style="text-decoration: none;" target="_blank">Privacy Policy</a> · <a href="https://www.example.com/" rel="noopener" style="text-decoration: none;" target="_blank">Terms</a> · <a href="https://www.example.com/" rel="noopener" style="text-decoration: none;" target="_blank">Security</a> · <a href="https://www.example.com/" rel="noopener" style="text-decoration: none;" target="_blank">Accessibility</a> · <a href="https://www.example.com/" rel="noopener" style="text-decoration: none;" target="_blank">Cookie Settings</a></span></strong></p>
-						<p>© 2023 - 2026  METY Tech, Inc. All rights reserved.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo">METY</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#newsletter">Newsletter</a></li>
+            </ul>
+        </div>
+    </nav>
 
+    <!-- Hero Carousel Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="slide">
+                <div class="item" style="background-image: url(https://i.ibb.co/qCkd9jS/img1.jpg);">
+                    <div class="content">
+                        <div class="name">Extended Lifespan</div>
+                        <div class="des">Personalized recommendations to potentially extend your lifespan</div>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(https://i.ibb.co/jrRb11q/img2.jpg);">
+                    <div class="content">
+                        <div class="name">Enhanced Health</div>
+                        <div class="des">Improve overall well-being through evidence-based practices</div>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(https://i.ibb.co/NSwVV8D/img3.jpg);">
+                    <div class="content">
+                        <div class="name">Tailored Approach</div>
+                        <div class="des">Customized plan that suits your lifestyle and preferences</div>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(https://i.ibb.co/Bq4Q0M8/img4.jpg);">
+                    <div class="content">
+                        <div class="name">Ongoing Optimization</div>
+                        <div class="des">Continuously improve based on data insights and research</div>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(https://i.ibb.co/jTQfmTq/img5.jpg);">
+                    <div class="content">
+                        <div class="name">AI-Powered Insights</div>
+                        <div class="des">Harness machine learning for personalized recommendations</div>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(https://i.ibb.co/RNkk6L0/img6.jpg);">
+                    <div class="content">
+                        <div class="name">Scientific Foundation</div>
+                        <div class="des">Built on cutting-edge longevity research and data</div>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits-section">
+        <div class="section-container">
+            <h2>Benefits</h2>
+            <p class="subtitle">The measurable advantages of shifting from reactive care to proactive vitality.</p>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/012/mch/wop/fec65265-f0db-405b-af8a-4e5a21d9a9d0.png" alt="Extended Lifespan">
+                    <h3>Extended Lifespan</h3>
+                    <p>Receive Personalized Recommendations To Potentially Extend Your Lifespan.</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/mej/m3q/bo1/36aab2598d4bb2a5a3bdb8dc827d2005.jpeg" alt="Enhanced Health">
+                    <h3>Enhanced Health</h3>
+                    <p>Improve Overall Well-Being Through Evidence-Based Health Practices.</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/zuz/ysw/2xw/e8227d70-ef19-4746-86e8-f81d6cfc2f54.png" alt="Tailored Approach">
+                    <h3>Tailored Approach</h3>
+                    <p>Get A Customized Plan That Suits Your Lifestyle and Preferences.</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/mzs/7gs/y9m/8ab43410-2121-4fb0-a6a3-c28aae92ff99.png" alt="Ongoing Optimization">
+                    <h3>Ongoing Optimization</h3>
+                    <p>Continuously Improve Your Health and Longevity Outcomes Based On Data Insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="section-container">
+            <h2>Key Features</h2>
+            <p class="subtitle">Intelligent tools and evidence-based science designed to unlock your longevity potential.</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/q5u/tjh/dzp/creative-team.png" alt="Personalized Recommendations">
+                    <h3>Personalized Recommendations</h3>
+                </div>
+                <div class="feature-card">
+                    <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/yca/zex/tj1/connection.png" alt="Comprehensive Health">
+                    <h3>Comprehensive Health Areas</h3>
+                </div>
+                <div class="feature-card">
+                    <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/kup/mzd/qdt/routine.png" alt="Research Integration">
+                    <h3>Latest Research Integration</h3>
+                </div>
+                <div class="feature-card">
+                    <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/8wz/ia0/hth/top.png" alt="Data Analytics">
+                    <h3>Data Analytics Insights</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="newsletter">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Stay in the loop</h3>
+                <p>Thoughtful product updates, sent occasionally.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="email@example.com" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="#">Scientific Foundation</a></li>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Longevity</a></li>
+                    <li><a href="#">Core Pillars</a></li>
+                    <li><a href="#">Our Technology</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Longevity Library</a></li>
+                    <li><a href="#">Research & Studies</a></li>
+                    <li><a href="#">Vitality Blog</a></li>
+                    <li><a href="#">Community Insights</a></li>
+                    <li><a href="#">Health-span Guides</a></li>
+                    <li><a href="#">Science Updates</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>More</h3>
+                <ul>
+                    <li><a href="#">About METY Tech</a></li>
+                    <li><a href="#">Partner Program</a></li>
+                    <li><a href="#">Advisory Board</a></li>
+                    <li><a href="#">Press & Media</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Career Opportunities</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>
+                <a href="#">Privacy Policy</a> · 
+                <a href="#">Terms</a> · 
+                <a href="#">Security</a> · 
+                <a href="#">Accessibility</a> · 
+                <a href="#">Cookie Settings</a>
+            </p>
+            <p>© 2023 - 2026 METY Tech, Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Carousel functionality
+        let next = document.querySelector('.next');
+        let prev = document.querySelector('.prev');
+
+        function moveNext(){
+            let items = document.querySelectorAll('.item');
+            document.querySelector('.slide').appendChild(items[0]);
+        }
+
+        function movePrev(){
+            let items = document.querySelectorAll('.item');
+            document.querySelector('.slide').prepend(items[items.length - 1]);
+        }
+
+        next.addEventListener('click', moveNext);
+        prev.addEventListener('click', movePrev);
+
+        // Make small cards clickable
+        document.querySelectorAll('.item').forEach((item, index) => {
+            item.addEventListener('click', function() {
+                if (!this.classList.contains('active-large')) {
+                    moveNext();
+                }
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navigation shadow effect on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.boxShadow = '0 2px 30px rgba(0, 0, 0, 0.15)';
+            } else {
+                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            }
+        });
+    </script>
+</body>
 </html>
