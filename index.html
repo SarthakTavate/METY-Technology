@@ -5,120 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>METY Technology - Unlock Your Longevity Potential</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body{
-            background: #1a1a2e;
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            overflow-x: hidden;
-            position: relative;
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            font-family: 'Inter', -apple-system, sans-serif;
         }
 
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070") center/cover;
-            z-index: -2;
-        }
-
-        body::after {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            z-index: -1;
-        }
-
-        /* Navigation */
-        nav{
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            padding: 20px 0;
-        }
-
-        nav .nav-content{
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 40px;
-        }
-
-        nav .logo{
-            font-size: 28px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        nav ul{
-            list-style: none;
-            display: flex;
-            gap: 30px;
-        }
-
-        nav ul li a{
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: all 0.3s;
-            padding: 8px 16px;
-            border-radius: 20px;
-        }
-
-        nav ul li a:hover{
-            background: rgba(102, 126, 234, 0.1);
-            color: #667eea;
-        }
-
-        /* Hero Carousel Section */
-        .hero-section{
+        /* Carousel Section */
+        .carousel-section {
             position: relative;
             height: 100vh;
+            background: #f5f5f5;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: 80px;
         }
 
-        .container{
+        .container {
             position: relative;
             width: 1000px;
             height: 600px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            background: #f5f5f5;
+            box-shadow: 0 30px 50px #dbdbdb;
         }
 
-        .container .slide .item{
+        .container .slide .item {
             width: 200px;
             height: 300px;
             position: absolute;
             top: 50%;
             transform: translate(0, -50%);
             border-radius: 20px;
-            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 30px 50px #505050;
             background-position: 50% 50%;
             background-size: cover;
             display: inline-block;
@@ -127,44 +54,44 @@
             cursor: pointer;
         }
 
-        .container .slide .item:hover{
+        .container .slide .item:hover {
             border-color: rgba(255, 255, 255, 0.5);
             transform: translate(0, -50%) translateY(-5px);
         }
 
         .slide .item:nth-child(1),
-        .slide .item:nth-child(2){
+        .slide .item:nth-child(2) {
             top: 0;
             left: 0;
             transform: translate(0, 0);
-            border-radius: 30px;
+            border-radius: 0;
             width: 100%;
             height: 100%;
             cursor: default;
         }
 
-        .slide .item:nth-child(2):hover{
+        .slide .item:nth-child(2):hover {
             transform: translate(0, 0);
         }
 
-        .slide .item:nth-child(3){
+        .slide .item:nth-child(3) {
             left: 50%;
         }
 
-        .slide .item:nth-child(4){
+        .slide .item:nth-child(4) {
             left: calc(50% + 220px);
         }
 
-        .slide .item:nth-child(5){
+        .slide .item:nth-child(5) {
             left: calc(50% + 440px);
         }
 
-        .slide .item:nth-child(n + 6){
+        .slide .item:nth-child(n + 6) {
             left: calc(50% + 660px);
             opacity: 0;
         }
 
-        .item .content{
+        .item .content {
             position: absolute;
             top: 50%;
             left: 100px;
@@ -172,14 +99,15 @@
             text-align: left;
             color: #eee;
             transform: translate(0, -50%);
+            font-family: 'Inter';
             display: none;
         }
 
-        .slide .item:nth-child(2) .content{
+        .slide .item:nth-child(2) .content {
             display: block;
         }
 
-        .content .name{
+        .content .name {
             font-size: 40px;
             text-transform: uppercase;
             font-weight: bold;
@@ -187,48 +115,45 @@
             animation: animate 1s ease-in-out 1 forwards;
         }
 
-        .content .des{
+        .content .des {
             margin-top: 10px;
             margin-bottom: 20px;
             opacity: 0;
             animation: animate 1s ease-in-out 0.3s 1 forwards;
         }
 
-        .content button{
+        .content button {
             padding: 10px 20px;
             border: none;
             cursor: pointer;
             opacity: 0;
             animation: animate 1s ease-in-out 0.6s 1 forwards;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            color: #fff;
+            background: #fff;
+            color: #000;
             font-weight: 600;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 32px;
             transition: all 0.3s;
         }
 
-        .content button:hover{
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        .content button:hover {
+            background: #000;
+            color: #fff;
         }
 
         @keyframes animate {
-            from{
+            from {
                 opacity: 0;
                 transform: translate(0, 100px);
                 filter: blur(33px);
             }
-            to{
+            to {
                 opacity: 1;
                 transform: translate(0);
                 filter: blur(0);
             }
         }
 
-        .button{
+        .button {
             width: 100%;
             text-align: center;
             position: absolute;
@@ -236,350 +161,386 @@
             z-index: 100;
         }
 
-        .button button{
+        .button button {
             width: 40px;
             height: 35px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            border: none;
             cursor: pointer;
             margin: 0 5px;
+            border: 1px solid #000;
             transition: 0.3s;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
+            background: #fff;
+        }
+
+        .button button:hover {
+            background: #ababab;
             color: #fff;
         }
 
-        .button button:hover{
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #ffffff;
+            z-index: 1000;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        /* Section Styling */
-        section{
-            padding: 100px 40px;
-            min-height: 100vh;
+        nav .nav-content {
+            max-width: 1355px;
+            margin: 0 auto;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
+            padding: 0 60px;
         }
 
-        .section-container{
-            max-width: 1200px;
-            width: 100%;
+        nav .logo img {
+            max-width: 105px;
         }
 
-        /* Benefits Section */
-        .benefits-section{
-            background: url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=2074") center/cover;
-            position: relative;
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 28px;
         }
 
-        .benefits-section::before{
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 0;
+        nav ul li a {
+            text-decoration: none;
+            color: #040b22;
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.3s;
         }
 
-        .benefits-section .section-container{
-            position: relative;
-            z-index: 1;
+        nav ul li a:hover {
+            color: #666;
         }
 
-        .benefits-section h2{
-            font-size: 48px;
+        nav .contact-btn {
+            background: #000000;
+            color: #ffffff;
+            padding: 5px 24px;
+            border-radius: 32px;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 200%;
+            transition: all 0.3s;
+        }
+
+        nav .contact-btn:hover {
+            background: #ffffff;
+            color: #000000;
+            border: 2px solid #000000;
+        }
+
+        /* Main Content Sections */
+        .content-section {
+            max-width: 1355px;
+            margin: 100px auto 0;
+            padding: 60px;
+        }
+
+        .section-header {
             text-align: center;
-            margin-bottom: 20px;
-            color: #fff;
-            font-weight: bold;
+            margin-bottom: 24px;
         }
 
-        .benefits-section .subtitle{
-            text-align: center;
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 18px;
-            margin-bottom: 60px;
+        .section-header h2 {
+            color: #040b22;
+            font-size: 40px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            line-height: 120%;
         }
 
-        .benefits-grid{
+        .section-header p {
+            color: #000000;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 120%;
+            margin-top: 10px;
+        }
+
+        /* Two Column Layout */
+        .two-column {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: 1fr 1fr;
             gap: 30px;
+            margin: 60px 0;
         }
 
-        .benefit-card{
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 40px;
+        .column-card {
             border-radius: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            transition: all 0.5s;
-            text-align: center;
+            overflow: hidden;
         }
 
-        .benefit-card:hover{
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        .benefit-card img{
+        .column-card img {
             width: 100%;
-            border-radius: 20px;
-            margin-bottom: 20px;
-        }
-
-        .benefit-card h3{
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: #fff;
-            font-weight: bold;
-        }
-
-        .benefit-card p{
-            color: rgba(255, 255, 255, 0.85);
-            line-height: 1.6;
-        }
-
-        /* Features Section */
-        .features-section{
-            background: url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2071") center/cover;
-            position: relative;
-        }
-
-        .features-section::before{
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 0;
-        }
-
-        .features-section .section-container{
-            position: relative;
-            z-index: 1;
-        }
-
-        .features-section h2{
-            font-size: 48px;
-            text-align: center;
-            margin-bottom: 20px;
-            color: #fff;
-            font-weight: bold;
-        }
-
-        .features-section .subtitle{
-            text-align: center;
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 18px;
-            margin-bottom: 60px;
-        }
-
-        .features-grid{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-        }
-
-        .feature-card{
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 40px;
             border-radius: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            transition: all 0.5s;
-            text-align: center;
         }
 
-        .feature-card:hover{
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
-            background: rgba(255, 255, 255, 0.15);
+        .column-card h3 {
+            color: #040b22;
+            font-size: 23px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            line-height: 130%;
+            margin: 24px 0 10px;
         }
 
-        .feature-card img{
-            width: 131px;
-            height: 131px;
-            border-radius: 20px;
-            margin: 0 auto 20px;
-            display: block;
-        }
-
-        .feature-card h3{
+        .column-card p {
+            color: #4a4f5f;
             font-size: 20px;
-            color: #fff;
-            font-weight: bold;
+            font-weight: 300;
+            letter-spacing: -1px;
+            line-height: 150%;
+            margin-bottom: 16px;
+        }
+
+        .column-card .learn-more {
+            display: inline-block;
+            background: #000000;
+            color: #ffffff;
+            padding: 5px 24px;
+            border-radius: 32px;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 200%;
+            transition: all 0.3s;
+        }
+
+        .column-card .learn-more:hover {
+            background: transparent;
+            color: #000000;
+            border: 2px solid #000000;
+        }
+
+        /* Four Column Grid */
+        .four-column {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin: 60px 0;
+        }
+
+        .grid-card {
+            border-radius: 24px;
+        }
+
+        .grid-card img {
+            width: 100%;
+            border-radius: 20px;
+            margin-bottom: 24px;
+        }
+
+        .grid-card h3 {
+            color: #040b22;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            line-height: 130%;
+            margin-bottom: 8px;
+        }
+
+        .grid-card p {
+            color: #4a4f5f;
+            font-size: 20px;
+            font-weight: 300;
+            letter-spacing: -1px;
+            line-height: 150%;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin: 60px 0;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-item img {
+            width: 131px;
+            border-radius: 20px;
+            margin: 0 auto 24px;
+        }
+
+        .feature-item h3 {
+            color: #040b22;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            line-height: 130%;
         }
 
         /* Footer */
-        footer{
-            padding: 80px 40px 40px;
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-            color: #fff;
+        footer {
+            background: #f5f5f7;
+            padding: 60px;
         }
 
-        .footer-content{
-            max-width: 1200px;
+        .footer-content {
+            max-width: 1355px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr;
             gap: 40px;
-            margin-bottom: 40px;
         }
 
-        .footer-section h3{
-            margin-bottom: 20px;
-            font-size: 20px;
-            color: #fff;
+        .footer-section h3 {
+            color: #040b22;
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            margin-bottom: 24px;
         }
 
-        .footer-section p,
-        .footer-section ul{
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.8;
+        .footer-section p {
+            color: #4a4f5f;
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: -1px;
+            line-height: 130%;
+            margin-bottom: 16px;
         }
 
-        .footer-section ul{
-            list-style: none;
-        }
-
-        .footer-section ul li{
-            margin-bottom: 10px;
-        }
-
-        .footer-section ul li a{
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-section ul li a:hover{
-            color: #fff;
-        }
-
-        .newsletter-form{
+        .newsletter-form {
             display: flex;
             gap: 10px;
-            margin-top: 20px;
+            margin-bottom: 25px;
         }
 
-        .newsletter-form input{
+        .newsletter-form input {
             flex: 1;
-            padding: 12px 20px;
+            padding: 5px 8px;
+            min-height: 38.8px;
+            border: 1px solid #d9d9d9;
             border-radius: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            color: #fff;
-            font-size: 14px;
+            background: #ffffff;
+            color: #4a4f5f;
+            font-size: 16px;
         }
 
-        .newsletter-form input::placeholder{
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        .newsletter-form button{
-            padding: 12px 30px;
-            border-radius: 24px;
+        .newsletter-form button {
+            padding: 5px 24px;
+            background: #000000;
+            color: #ffffff;
             border: none;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            color: #fff;
-            font-weight: 600;
+            border-radius: 24px;
+            font-weight: 400;
+            line-height: 200%;
             cursor: pointer;
             transition: all 0.3s;
         }
 
-        .newsletter-form button:hover{
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
+        .newsletter-form button:hover {
+            background: #333;
         }
 
-        .social-links{
+        .social-links {
             display: flex;
-            gap: 15px;
-            margin-top: 20px;
+            gap: 10px;
         }
 
-        .social-links a{
-            width: 45px;
-            height: 45px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 50%;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
+        .social-links a {
+            width: 32px;
+            height: 32px;
+            display: inline-block;
+        }
+
+        .social-links img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links h4 {
+            color: #040b22;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            color: #4a4f5f;
+            font-size: 14px;
+            font-weight: 300;
             text-decoration: none;
-            transition: all 0.3s;
+            line-height: 140%;
         }
 
-        .social-links a:hover{
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-3px);
+        .footer-links a:hover {
+            color: #040b22;
         }
 
-        .footer-bottom{
-            text-align: center;
+        .footer-bottom {
+            max-width: 1355px;
+            margin: 40px auto 0;
             padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            color: rgba(255, 255, 255, 0.7);
+            border-top: 1px solid #000000;
+            text-align: center;
         }
 
-        .footer-bottom a{
-            color: rgba(255, 255, 255, 0.7);
+        .footer-bottom p {
+            color: #4a4f5f;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 150%;
+        }
+
+        .footer-bottom a {
+            color: #4a4f5f;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 5px;
         }
 
-        .footer-bottom a:hover{
-            color: #fff;
-        }
-
-        @media (max-width: 768px){
-            .container{
+        @media (max-width: 768px) {
+            .container {
                 width: 90%;
                 height: 400px;
             }
 
-            nav .nav-content{
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            nav ul{
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .content .name{
+            .content .name {
                 font-size: 28px;
             }
 
-            .item .content{
+            .item .content {
                 left: 40px;
                 width: 250px;
             }
 
-            .footer-content{
+            .two-column,
+            .four-column,
+            .features-grid,
+            .footer-content {
                 grid-template-columns: 1fr;
             }
 
-            .benefits-grid,
-            .features-grid{
-                grid-template-columns: 1fr;
+            nav .nav-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
             }
         }
     </style>
@@ -588,60 +549,63 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-content">
-            <div class="logo">METY</div>
+            <div class="logo">
+                <a href="#"><img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/zoe/9ox/u9b/METY.png" alt="METY Logo"></a>
+            </div>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#newsletter">Newsletter</a></li>
+                <li><a href="#myyouthspan">My Youth Span</a></li>
+                <li><a href="#careers">Careers / Internships</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
+            <a href="#contact" class="contact-btn">Contact us</a>
         </div>
     </nav>
 
-    <!-- Hero Carousel Section -->
-    <section id="home" class="hero-section">
+    <!-- Carousel Section -->
+    <section class="carousel-section" style="margin-top: 80px;">
         <div class="container">
             <div class="slide">
                 <div class="item" style="background-image: url(https://i.ibb.co/qCkd9jS/img1.jpg);">
                     <div class="content">
                         <div class="name">Extended Lifespan</div>
-                        <div class="des">Personalized recommendations to potentially extend your lifespan</div>
-                        <button>Learn More</button>
+                        <div class="des">Receive personalized recommendations to potentially extend your lifespan</div>
+                        <button>See More</button>
                     </div>
                 </div>
                 <div class="item" style="background-image: url(https://i.ibb.co/jrRb11q/img2.jpg);">
                     <div class="content">
                         <div class="name">Enhanced Health</div>
-                        <div class="des">Improve overall well-being through evidence-based practices</div>
-                        <button>Learn More</button>
+                        <div class="des">Improve overall well-being through evidence-based health practices</div>
+                        <button>See More</button>
                     </div>
                 </div>
                 <div class="item" style="background-image: url(https://i.ibb.co/NSwVV8D/img3.jpg);">
                     <div class="content">
                         <div class="name">Tailored Approach</div>
-                        <div class="des">Customized plan that suits your lifestyle and preferences</div>
-                        <button>Learn More</button>
+                        <div class="des">Get a customized plan that suits your lifestyle and preferences</div>
+                        <button>See More</button>
                     </div>
                 </div>
                 <div class="item" style="background-image: url(https://i.ibb.co/Bq4Q0M8/img4.jpg);">
                     <div class="content">
                         <div class="name">Ongoing Optimization</div>
-                        <div class="des">Continuously improve based on data insights and research</div>
-                        <button>Learn More</button>
+                        <div class="des">Continuously improve your health and longevity outcomes</div>
+                        <button>See More</button>
                     </div>
                 </div>
                 <div class="item" style="background-image: url(https://i.ibb.co/jTQfmTq/img5.jpg);">
                     <div class="content">
                         <div class="name">AI-Powered Insights</div>
-                        <div class="des">Harness machine learning for personalized recommendations</div>
-                        <button>Learn More</button>
+                        <div class="des">Harness machine learning for personalized health recommendations</div>
+                        <button>See More</button>
                     </div>
                 </div>
                 <div class="item" style="background-image: url(https://i.ibb.co/RNkk6L0/img6.jpg);">
                     <div class="content">
                         <div class="name">Scientific Foundation</div>
-                        <div class="des">Built on cutting-edge longevity research and data</div>
-                        <button>Learn More</button>
+                        <div class="des">Built on cutting-edge longevity research and data analytics</div>
+                        <button>See More</button>
                     </div>
                 </div>
             </div>
@@ -652,83 +616,108 @@
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section id="benefits" class="benefits-section">
-        <div class="section-container">
-            <h2>Benefits</h2>
-            <p class="subtitle">The measurable advantages of shifting from reactive care to proactive vitality.</p>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/012/mch/wop/fec65265-f0db-405b-af8a-4e5a21d9a9d0.png" alt="Extended Lifespan">
-                    <h3>Extended Lifespan</h3>
-                    <p>Receive Personalized Recommendations To Potentially Extend Your Lifespan.</p>
-                </div>
-                <div class="benefit-card">
-                    <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/mej/m3q/bo1/36aab2598d4bb2a5a3bdb8dc827d2005.jpeg" alt="Enhanced Health">
-                    <h3>Enhanced Health</h3>
-                    <p>Improve Overall Well-Being Through Evidence-Based Health Practices.</p>
-                </div>
-                <div class="benefit-card">
-                    <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/zuz/ysw/2xw/e8227d70-ef19-4746-86e8-f81d6cfc2f54.png" alt="Tailored Approach">
-                    <h3>Tailored Approach</h3>
-                    <p>Get A Customized Plan That Suits Your Lifestyle and Preferences.</p>
-                </div>
-                <div class="benefit-card">
-                    <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/mzs/7gs/y9m/8ab43410-2121-4fb0-a6a3-c28aae92ff99.png" alt="Ongoing Optimization">
-                    <h3>Ongoing Optimization</h3>
-                    <p>Continuously Improve Your Health and Longevity Outcomes Based On Data Insights.</p>
-                </div>
-            </div>
+    <!-- What's New Section -->
+    <div class="content-section">
+        <div class="section-header">
+            <h2>What's New.</h2>
+            <p>Fresh insights and software enhancements to optimize your personalized health plan.</p>
         </div>
-    </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features-section">
-        <div class="section-container">
-            <h2>Key Features</h2>
-            <p class="subtitle">Intelligent tools and evidence-based science designed to unlock your longevity potential.</p>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/q5u/tjh/dzp/creative-team.png" alt="Personalized Recommendations">
-                    <h3>Personalized Recommendations</h3>
-                </div>
-                <div class="feature-card">
-                    <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/yca/zex/tj1/connection.png" alt="Comprehensive Health">
-                    <h3>Comprehensive Health Areas</h3>
-                </div>
-                <div class="feature-card">
-                    <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/kup/mzd/qdt/routine.png" alt="Research Integration">
-                    <h3>Latest Research Integration</h3>
-                </div>
-                <div class="feature-card">
-                    <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/8wz/ia0/hth/top.png" alt="Data Analytics">
-                    <h3>Data Analytics Insights</h3>
-                </div>
+        <div class="two-column">
+            <div class="column-card">
+                <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/f7g/sok/amw/b3aacc0b-8745-4b18-9565-374cfbecd6c2.png" alt="MyYouthspan">
+                <h3>Unlock Your Longevity And Vitality Potential</h3>
+                <p>MyYouthspan harnesses the power of AI, machine learning, and cutting-edge science to provide you with personalized recommendations for a longer, healthier life. From diet and exercise to stress reduction and sleep optimization, My Youthspan tailors its insights to your unique needs.</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+            <div class="column-card">
+                <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/ke6/9f7/0fr/Evolution%20poster.png" alt="Pilot Programs">
+                <h3>Expecting to begin pilot programs</h3>
+                <p>METY Technology expects to begin pilot programs to test its My Youthspan software in the spring of 2024. We are looking for organizations that serve people in the 40 - 80 year old age range who would like to partner with us and have their membership be participants in this program.</p>
+                <a href="#" class="learn-more">Learn More</a>
             </div>
         </div>
-    </section>
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="content-section">
+        <div class="section-header">
+            <h2>Benefits</h2>
+            <p>The measurable advantages of shifting from reactive care to proactive vitality.</p>
+        </div>
+
+        <div class="four-column">
+            <div class="grid-card">
+                <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/012/mch/wop/fec65265-f0db-405b-af8a-4e5a21d9a9d0.png" alt="Extended Lifespan">
+                <h3>Extended Lifespan</h3>
+                <p>Receive Personalized Recommendations To Potentially Extend Your Lifespan.</p>
+            </div>
+            <div class="grid-card">
+                <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/mej/m3q/bo1/36aab2598d4bb2a5a3bdb8dc827d2005.jpeg" alt="Enhanced Health">
+                <h3>Enhanced Health</h3>
+                <p>Improve Overall Well-Being Through Evidence-Based Health Practices.</p>
+            </div>
+            <div class="grid-card">
+                <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/zuz/ysw/2xw/e8227d70-ef19-4746-86e8-f81d6cfc2f54.png" alt="Tailored Approach">
+                <h3>Tailored Approach</h3>
+                <p>Get A Customized Plan That Suits Your Lifestyle and Preferences.</p>
+            </div>
+            <div class="grid-card">
+                <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/mzs/7gs/y9m/8ab43410-2121-4fb0-a6a3-c28aae92ff99.png" alt="Ongoing Optimization">
+                <h3>Ongoing Optimization</h3>
+                <p>Continuously Improve Your Health and Longevity Outcomes Based On Data Insights.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Features Section -->
+    <div class="content-section">
+        <div class="section-header">
+            <h2>Key Features</h2>
+            <p>Intelligent tools and evidence-based science designed to unlock your longevity potential.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/q5u/tjh/dzp/creative-team.png" alt="Personalized Recommendations">
+                <h3>Personalized Recommendations</h3>
+            </div>
+            <div class="feature-item">
+                <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/yca/zex/tj1/connection.png" alt="Comprehensive Health Areas">
+                <h3>Comprehensive Health Areas</h3>
+            </div>
+            <div class="feature-item">
+                <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/kup/mzd/qdt/routine.png" alt="Latest Research Integration">
+                <h3>Latest Research Integration</h3>
+            </div>
+            <div class="feature-item">
+                <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/8wz/ia0/hth/top.png" alt="Data Analytics Insights">
+                <h3>Data - Analytics Insights</h3>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
-    <footer id="newsletter">
+    <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Stay in the loop</h3>
+                <h3>Stay in the loop.</h3>
                 <p>Thoughtful product updates, sent occasionally.</p>
                 <form class="newsletter-form">
-                    <input type="email" placeholder="email@example.com" required>
+                    <input type="email" placeholder="  email@example.com" required>
                     <button type="submit">Subscribe</button>
                 </form>
                 <div class="social-links">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-pinterest"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><img src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-outline-circle-dark-gray/facebook@2x.png" alt="Facebook"></a>
+                    <a href="#"><img src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-outline-circle-dark-gray/pinterest@2x.png" alt="Pinterest"></a>
+                    <a href="#"><img src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-outline-circle-dark-gray/instagram@2x.png" alt="Instagram"></a>
+                    <a href="#"><img src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-outline-circle-dark-gray/youtube@2x.png" alt="YouTube"></a>
+                    <a href="#"><img src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-outline-circle-dark-gray/linkedin@2x.png" alt="LinkedIn"></a>
                 </div>
             </div>
             <div class="footer-section">
-                <h3>Explore</h3>
-                <ul>
+                <ul class="footer-links">
+                    <h4>Explore</h4>
                     <li><a href="#">Scientific Foundation</a></li>
                     <li><a href="#">How It Works</a></li>
                     <li><a href="#">Solutions</a></li>
@@ -738,8 +727,8 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Resources</h3>
-                <ul>
+                <ul class="footer-links">
+                    <h4>Resources</h4>
                     <li><a href="#">Longevity Library</a></li>
                     <li><a href="#">Research & Studies</a></li>
                     <li><a href="#">Vitality Blog</a></li>
@@ -749,8 +738,8 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>More</h3>
-                <ul>
+                <ul class="footer-links">
+                    <h4>More</h4>
                     <li><a href="#">About METY Tech</a></li>
                     <li><a href="#">Partner Program</a></li>
                     <li><a href="#">Advisory Board</a></li>
@@ -777,12 +766,12 @@
         let next = document.querySelector('.next');
         let prev = document.querySelector('.prev');
 
-        function moveNext(){
+        function moveNext() {
             let items = document.querySelectorAll('.item');
             document.querySelector('.slide').appendChild(items[0]);
         }
 
-        function movePrev(){
+        function movePrev() {
             let items = document.querySelectorAll('.item');
             document.querySelector('.slide').prepend(items[items.length - 1]);
         }
@@ -791,36 +780,12 @@
         prev.addEventListener('click', movePrev);
 
         // Make small cards clickable
-        document.querySelectorAll('.item').forEach((item, index) => {
+        document.querySelectorAll('.item').forEach((item) => {
             item.addEventListener('click', function() {
                 if (!this.classList.contains('active-large')) {
                     moveNext();
                 }
             });
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if(target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Navigation shadow effect on scroll
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.style.boxShadow = '0 2px 30px rgba(0, 0, 0, 0.15)';
-            } else {
-                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-            }
         });
     </script>
 </body>
