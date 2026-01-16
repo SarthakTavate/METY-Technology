@@ -15,7 +15,7 @@
         }
 
         body {
-            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+            background-color: #ffffff;
             color: #000000;
             font-family: 'Inter', -apple-system, sans-serif;
         }
@@ -24,7 +24,7 @@
         .carousel-section {
             position: relative;
             height: 100vh;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+            background: #f5f5f5;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -34,14 +34,10 @@
             position: relative;
             width: 1000px;
             height: 600px;
-            background: rgba(255, 255, 255, 0.4);
-            backdrop-filter: blur(30px) saturate(180%);
-            -webkit-backdrop-filter: blur(30px) saturate(180%);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08),
-                        0 0 0 0.5px rgba(255, 255, 255, 0.5) inset;
+            background: #f5f5f5;
+            box-shadow: 0 30px 50px #dbdbdb;
             border-radius: 30px;
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.18);
         }
 
         .container .slide .item {
@@ -51,19 +47,18 @@
             top: 50%;
             transform: translate(0, -50%);
             border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 30px 50px #505050;
             background-position: 50% 50%;
             background-size: cover;
             display: inline-block;
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: 0.5s;
+            border: 2px solid rgba(255, 255, 255, 0.3);
             cursor: pointer;
         }
 
         .container .slide .item:hover {
-            border-color: rgba(255, 255, 255, 0.6);
+            border-color: rgba(255, 255, 255, 0.5);
             transform: translate(0, -50%) translateY(-5px);
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
         }
 
         .slide .item:nth-child(1),
@@ -71,23 +66,10 @@
             top: 0;
             left: 0;
             transform: translate(0, 0);
-            border-radius: 30px;
+            border-radius: 0;
             width: 100%;
             height: 100%;
             cursor: default;
-            position: relative;
-        }
-
-        .slide .item:nth-child(1)::after,
-        .slide .item:nth-child(2)::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
-            border-radius: 30px;
         }
 
         .slide .item:nth-child(2):hover {
@@ -117,11 +99,10 @@
             left: 100px;
             width: 300px;
             text-align: left;
-            color: #fff;
+            color: #eee;
             transform: translate(0, -50%);
             font-family: 'Inter';
             display: none;
-            z-index: 10;
         }
 
         .slide .item:nth-child(2) .content {
@@ -134,7 +115,6 @@
             font-weight: bold;
             opacity: 0;
             animation: animate 1s ease-in-out 1 forwards;
-            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
         }
 
         .content .des {
@@ -142,7 +122,6 @@
             margin-bottom: 20px;
             opacity: 0;
             animation: animate 1s ease-in-out 0.3s 1 forwards;
-            text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
         }
 
         .content button {
@@ -151,21 +130,16 @@
             cursor: pointer;
             opacity: 0;
             animation: animate 1s ease-in-out 0.6s 1 forwards;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            color: #fff;
+            background: #fff;
+            color: #000;
             font-weight: 600;
             border-radius: 32px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s;
         }
 
         .content button:hover {
-            background: rgba(255, 255, 255, 0.95);
-            color: #000;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            background: #000;
+            color: #fff;
         }
 
         @keyframes animate {
@@ -190,25 +164,20 @@
         }
 
         .button button {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
+            width: 40px;
+            height: 35px;
+            border-radius: 8px;
             border: none;
             cursor: pointer;
             margin: 0 5px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            background: rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            color: #000;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border: 1px solid #000;
+            transition: 0.3s;
+            background: #fff;
         }
 
         .button button:hover {
-            background: rgba(255, 255, 255, 0.9);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+            background: #ababab;
+            color: #fff;
         }
 
         /* Navigation */
@@ -216,13 +185,10 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            background: #ffffff;
             z-index: 1000;
-            padding: 16px 0;
-            border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
-            box-shadow: 0 1px 20px rgba(0, 0, 0, 0.03);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         nav .nav-content {
@@ -236,51 +202,42 @@
 
         nav .logo img {
             max-width: 105px;
-            transition: transform 0.3s ease;
-        }
-
-        nav .logo:hover img {
-            transform: scale(1.05);
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            gap: 8px;
+            gap: 28px;
         }
 
         nav ul li a {
             text-decoration: none;
-            color: #1d1d1f;
+            color: #040b22;
             font-weight: 500;
             font-size: 16px;
-            padding: 8px 16px;
-            border-radius: 20px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s;
         }
 
         nav ul li a:hover {
-            background: rgba(0, 0, 0, 0.04);
-            color: #000;
+            color: #666;
         }
 
         nav .contact-btn {
             background: #000000;
             color: #ffffff;
-            padding: 8px 24px;
-            border-radius: 24px;
+            padding: 5px 24px;
+            border-radius: 32px;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 400;
             font-size: 14px;
             line-height: 200%;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s;
         }
 
         nav .contact-btn:hover {
-            background: #1d1d1f;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            background: #ffffff;
+            color: #000000;
+            border: 2px solid #000000;
         }
 
         /* Main Content Sections */
@@ -296,7 +253,7 @@
         }
 
         .section-header h2 {
-            color: #1d1d1f;
+            color: #040b22;
             font-size: 40px;
             font-weight: 700;
             letter-spacing: -1px;
@@ -304,9 +261,9 @@
         }
 
         .section-header p {
-            color: #6e6e73;
+            color: #000000;
             font-size: 16px;
-            font-weight: 400;
+            font-weight: 300;
             line-height: 120%;
             margin-top: 10px;
         }
@@ -322,26 +279,15 @@
         .column-card {
             border-radius: 30px;
             overflow: visible;
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .column-card:hover {
-            transform: translateY(-4px);
         }
 
         .column-card img {
             width: 100%;
             border-radius: 30px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .column-card:hover img {
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
         }
 
         .column-card h3 {
-            color: #1d1d1f;
+            color: #040b22;
             font-size: 23px;
             font-weight: 600;
             letter-spacing: -1px;
@@ -350,7 +296,7 @@
         }
 
         .column-card p {
-            color: #6e6e73;
+            color: #4a4f5f;
             font-size: 20px;
             font-weight: 300;
             letter-spacing: -1px;
@@ -360,50 +306,34 @@
 
         .column-card .learn-more {
             display: inline-block;
-            background: rgba(0, 0, 0, 0.04);
-            color: #000;
-            padding: 8px 24px;
+            background: #000000;
+            color: #ffffff;
+            padding: 5px 24px;
             border-radius: 32px;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 400;
             font-size: 16px;
             line-height: 200%;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s;
             margin-top: 10px;
-            border: 1px solid rgba(0, 0, 0, 0.08);
         }
 
         .column-card .learn-more:hover {
-            background: rgba(255, 255, 255, 0.95);
-            color: #000;
-            border: 1px solid rgba(0, 0, 0, 0.15);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background: transparent;
+            color: #000000;
+            border: 2px solid #000000;
         }
 
         /* Four Column Grid */
         .four-column {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            gap: 10px;
             margin: 40px 0 20px;
         }
 
         .grid-card {
             border-radius: 24px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .grid-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            background: rgba(255, 255, 255, 0.7);
         }
 
         .grid-card img {
@@ -413,7 +343,7 @@
         }
 
         .grid-card h3 {
-            color: #1d1d1f;
+            color: #040b22;
             font-size: 24px;
             font-weight: 600;
             letter-spacing: -1px;
@@ -422,7 +352,7 @@
         }
 
         .grid-card p {
-            color: #6e6e73;
+            color: #4a4f5f;
             font-size: 20px;
             font-weight: 300;
             letter-spacing: -1px;
@@ -433,26 +363,12 @@
         .features-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            gap: 10px;
             margin: 40px 0 20px;
         }
 
         .feature-item {
             text-align: center;
-            padding: 30px 20px;
-            background: rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            border-radius: 24px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-        }
-
-        .feature-item:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            background: rgba(255, 255, 255, 0.7);
         }
 
         .feature-item img {
@@ -462,7 +378,7 @@
         }
 
         .feature-item h3 {
-            color: #1d1d1f;
+            color: #040b22;
             font-size: 24px;
             font-weight: 600;
             letter-spacing: -1px;
@@ -471,11 +387,8 @@
 
         /* Footer */
         footer {
-            background: rgba(245, 245, 247, 0.8);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            background: #f5f5f7;
             padding: 60px;
-            border-top: 0.5px solid rgba(0, 0, 0, 0.05);
         }
 
         .footer-content {
@@ -487,7 +400,7 @@
         }
 
         .footer-section h3 {
-            color: #1d1d1f;
+            color: #040b22;
             font-size: 32px;
             font-weight: 600;
             letter-spacing: -1px;
@@ -495,7 +408,7 @@
         }
 
         .footer-section p {
-            color: #6e6e73;
+            color: #4a4f5f;
             font-size: 16px;
             font-weight: 300;
             letter-spacing: -1px;
@@ -513,18 +426,11 @@
             flex: 1;
             padding: 5px 8px;
             min-height: 38.8px;
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            border: 1px solid #d9d9d9;
             border-radius: 24px;
-            background: rgba(255, 255, 255, 0.8);
-            color: #1d1d1f;
+            background: #ffffff;
+            color: #4a4f5f;
             font-size: 16px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .newsletter-form input:focus {
-            outline: none;
-            border-color: rgba(0, 0, 0, 0.2);
-            background: #fff;
         }
 
         .newsletter-form button {
@@ -533,17 +439,14 @@
             color: #ffffff;
             border: none;
             border-radius: 24px;
-            font-weight: 500;
+            font-weight: 400;
             line-height: 200%;
             cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s;
         }
 
         .newsletter-form button:hover {
-            background: #1d1d1f;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            background: #333;
         }
 
         .social-links {
@@ -552,19 +455,9 @@
         }
 
         .social-links a {
-            width: 36px;
-            height: 36px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: rgba(0, 0, 0, 0.04);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .social-links a:hover {
-            background: rgba(0, 0, 0, 0.08);
-            transform: translateY(-2px);
+            width: 32px;
+            height: 32px;
+            display: inline-block;
         }
 
         .social-links img {
@@ -577,7 +470,7 @@
         }
 
         .footer-links h4 {
-            color: #1d1d1f;
+            color: #040b22;
             font-size: 16px;
             font-weight: 600;
             letter-spacing: -1px;
@@ -589,42 +482,36 @@
         }
 
         .footer-links a {
-            color: #6e6e73;
+            color: #4a4f5f;
             font-size: 14px;
             font-weight: 300;
             text-decoration: none;
             line-height: 140%;
-            transition: color 0.3s ease;
         }
 
         .footer-links a:hover {
-            color: #1d1d1f;
+            color: #040b22;
         }
 
         .footer-bottom {
             max-width: 1355px;
             margin: 40px auto 0;
             padding-top: 30px;
-            border-top: 0.5px solid rgba(0, 0, 0, 0.1);
+            border-top: 1px solid #000000;
             text-align: center;
         }
 
         .footer-bottom p {
-            color: #6e6e73;
+            color: #4a4f5f;
             font-size: 14px;
             font-weight: 300;
             line-height: 150%;
         }
 
         .footer-bottom a {
-            color: #6e6e73;
+            color: #4a4f5f;
             text-decoration: none;
             margin: 0 5px;
-            transition: color 0.3s ease;
-        }
-
-        .footer-bottom a:hover {
-            color: #1d1d1f;
         }
 
         @media (max-width: 768px) {
@@ -781,4 +668,128 @@
             <div class="grid-card">
                 <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/mzs/7gs/y9m/8ab43410-2121-4fb0-a6a3-c28aae92ff99.png" alt="Ongoing Optimization">
                 <h3>Ongoing Optimization</h3>
-                <p>Continuously Improve Your Health and Longevity Outcomes Base
+                <p>Continuously Improve Your Health and Longevity Outcomes Based On Data Insights.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Features Section -->
+    <div class="content-section">
+        <div class="section-header">
+            <h2>Key Features</h2>
+            <p>Intelligent tools and evidence-based science designed to unlock your longevity potential.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/q5u/tjh/dzp/creative-team.png" alt="Personalized Recommendations">
+                <h3>Personalized Recommendations</h3>
+            </div>
+            <div class="feature-item">
+                <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/yca/zex/tj1/connection.png" alt="Comprehensive Health Areas">
+                <h3>Comprehensive Health Areas</h3>
+            </div>
+            <div class="feature-item">
+                <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/kup/mzd/qdt/routine.png" alt="Latest Research Integration">
+                <h3>Latest Research Integration</h3>
+            </div>
+            <div class="feature-item">
+                <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/wsr39viv/8wz/ia0/hth/top.png" alt="Data Analytics Insights">
+                <h3>Data - Analytics Insights</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Stay in the loop.</h3>
+                <p>Thoughtful product updates, sent occasionally.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="  email@example.com" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="social-links">
+                    <a href="#"><img src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-outline-circle-dark-gray/facebook@2x.png" alt="Facebook"></a>
+                    <a href="#"><img src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-outline-circle-dark-gray/pinterest@2x.png" alt="Pinterest"></a>
+                    <a href="#"><img src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-outline-circle-dark-gray/instagram@2x.png" alt="Instagram"></a>
+                    <a href="#"><img src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-outline-circle-dark-gray/youtube@2x.png" alt="YouTube"></a>
+                    <a href="#"><img src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-outline-circle-dark-gray/linkedin@2x.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <ul class="footer-links">
+                    <h4>Explore</h4>
+                    <li><a href="#">Scientific Foundation</a></li>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Longevity</a></li>
+                    <li><a href="#">Core Pillars</a></li>
+                    <li><a href="#">Our Technology</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <ul class="footer-links">
+                    <h4>Resources</h4>
+                    <li><a href="#">Longevity Library</a></li>
+                    <li><a href="#">Research & Studies</a></li>
+                    <li><a href="#">Vitality Blog</a></li>
+                    <li><a href="#">Community Insights</a></li>
+                    <li><a href="#">Health-span Guides</a></li>
+                    <li><a href="#">Science Updates</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <ul class="footer-links">
+                    <h4>More</h4>
+                    <li><a href="#">About METY Tech</a></li>
+                    <li><a href="#">Partner Program</a></li>
+                    <li><a href="#">Advisory Board</a></li>
+                    <li><a href="#">Press & Media</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Career Opportunities</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>
+                <a href="#">Privacy Policy</a> · 
+                <a href="#">Terms</a> · 
+                <a href="#">Security</a> · 
+                <a href="#">Accessibility</a> · 
+                <a href="#">Cookie Settings</a>
+            </p>
+            <p>© 2023 - 2026 METY Tech, Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Carousel functionality
+        let next = document.querySelector('.next');
+        let prev = document.querySelector('.prev');
+
+        function moveNext() {
+            let items = document.querySelectorAll('.item');
+            document.querySelector('.slide').appendChild(items[0]);
+        }
+
+        function movePrev() {
+            let items = document.querySelectorAll('.item');
+            document.querySelector('.slide').prepend(items[items.length - 1]);
+        }
+
+        next.addEventListener('click', moveNext);
+        prev.addEventListener('click', movePrev);
+
+        // Make small cards clickable
+        document.querySelectorAll('.item').forEach((item) => {
+            item.addEventListener('click', function() {
+                if (!this.classList.contains('active-large')) {
+                    moveNext();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
